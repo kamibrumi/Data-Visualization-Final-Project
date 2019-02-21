@@ -1,3 +1,7 @@
+# To Run
+On UNIX: `DEBUG=final-project:* npm start`  
+On Windows: `set DEBUG=final-project:* & npm start`
+
 Final Project - Interactive Data Visualization  
 ===
 
