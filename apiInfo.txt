@@ -1,0 +1,4 @@
+Application name	CS480X-Final
+API key	655ebfb5fd6756447fdfcb2748a8de06
+Shared secret	297ec98c977a1cea8a8e25082fd4ca72
+Registered to	Shap_TheShap
