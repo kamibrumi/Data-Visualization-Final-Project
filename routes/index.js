@@ -21,7 +21,6 @@ router.get('/similar', function(req, res, next) {
     console.log(xhr.responseText);
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        console.log(xhr.responseText);
         res.send(xhr.responseText)
       } else {
         console.error(xhr.statusText)
