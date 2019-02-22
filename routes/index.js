@@ -18,7 +18,6 @@ router.get('/similar', function(req, res, next) {
   }
   let xhr  = new XMLHttpRequest();
   xhr.onload = function(e) {
-    console.log(xhr.responseText);
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         res.send(xhr.responseText)
