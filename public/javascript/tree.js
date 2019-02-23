@@ -15,7 +15,7 @@ var treeData =
 
 // set the dimensions and margins of the diagram
 var margin = {top: 40, right: 90, bottom: 50, left: 90},
-    width = 660 - margin.left - margin.right,
+    width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // declares a tree layout and assigns the size
