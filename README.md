@@ -2,15 +2,27 @@
 On UNIX: `DEBUG=final-project:* npm run devstart`  
 On Windows: `set DEBUG=final-project:* & npm run devstart`
 
+# Pushing to Heroku
+1) Push all desired code to master branch of git repo
+2) Run `git push heroku master`
+3) Run `heroku open`
+
+If build fails, run `heroku logs` to see error
+
+# Merge conflict with package-lock.json
+1) Delete package-lock.json
+2) Run `npm i`
+3) Run `git commit`
+
 Final Project - Interactive Data Visualization  
 ===
 
-The key learning experience of this course is the final project. 
-You will design a web site and interactive visualizations that answer questions you have or provide an exploratory interface to some topic of your own choosing. 
-You will acquire the data, design your visualizations, implement them, and critically evaluate the results. 
+The key learning experience of this course is the final project.
+You will design a web site and interactive visualizations that answer questions you have or provide an exploratory interface to some topic of your own choosing.
+You will acquire the data, design your visualizations, implement them, and critically evaluate the results.
 
-The path to a good visualization is going to involve mistakes and wrong turns. 
-It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
+The path to a good visualization is going to involve mistakes and wrong turns.
+It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions.
 To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
 
 We will discuss how to form teams as part of the process.
@@ -53,30 +65,30 @@ Your process book should include the following topics. Depending on your project
 - Implementation: Describe the intent and functionality of the interactive visualizations you implemented. Provide clear and well-referenced images showing the key design and interaction elements.
 - Evaluation: What did you learn about the data by using your visualizations? How did you answer your questions? How well does your visualization work, and how could you further improve it?
 
-As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your results and the final design. 
+As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your results and the final design.
 [Here](http://dataviscourse.net/2015/assets/process_books/bansal_cao_hou.pdf) are a [few examples](http://dataviscourse.net/2015/assets/process_books/walsh_trevino_bett.pdf) of process books from a similar course final.
 
 ### Project Website
 
-You will create a public website for your project using GitHub pages or any other web hosting service of your choice. 
-The web site should contain your interactive visualization, summarize the main results of the project, and tell a story. 
-Consider your audience (the site should be public public) and keep the level of discussion at the appropriate level. 
-Your process book and data should be linked from the web site as well. 
-Also embed your interactive visualization and your screen-cast in your website. 
+You will create a public website for your project using GitHub pages or any other web hosting service of your choice.
+The web site should contain your interactive visualization, summarize the main results of the project, and tell a story.
+Consider your audience (the site should be public public) and keep the level of discussion at the appropriate level.
+Your process book and data should be linked from the web site as well.
+Also embed your interactive visualization and your screen-cast in your website.
 If you are not able to publish your work (e.g., due to confidential data) please let us know in your project proposal.
 
 ### Project Screen-Cast
 
-Each team will create a two minute screen-cast with narration showing a demo of your visualization and/or some slides. 
-You can use any [screencast tool](http://dataviscourse.net/2015/screencast/) of your choice -- Camtasia works well. 
-Please make sure that the sound quality of your video is good - it may be worthwhile to invest in an external USB microphone. 
-Upload the video to an online video-platform such as YouTube or Vimeo and embed it into your project web page. 
+Each team will create a two minute screen-cast with narration showing a demo of your visualization and/or some slides.
+You can use any [screencast tool](http://dataviscourse.net/2015/screencast/) of your choice -- Camtasia works well.
+Please make sure that the sound quality of your video is good - it may be worthwhile to invest in an external USB microphone.
+Upload the video to an online video-platform such as YouTube or Vimeo and embed it into your project web page.
 We will show some of the best videos in class.
 
-We will strictly enforce the two minute time limit for the video, so please make sure you are not running longer. 
-Use principles of good storytelling and presentations to get your key points across. Focus the majority of your screencast on your main contributions rather than on technical details. 
-What do you feel is the best part of your project? 
-What insights did you gain? 
+We will strictly enforce the two minute time limit for the video, so please make sure you are not running longer.
+Use principles of good storytelling and presentations to get your key points across. Focus the majority of your screencast on your main contributions rather than on technical details.
+What do you feel is the best part of your project?
+What insights did you gain?
 What is the single most important thing you would like your audience to take away? Make sure it is front and center rather than at the end.
 
 Outside Libraries/References
@@ -84,7 +96,7 @@ Outside Libraries/References
 
 For this project you *do not* have to write everything from scratch.
 
-You may *reference* demo programs from books or the web, and *include* popular web libraries like Bootstrap, JQuery, Backbone, React, Meteor, etcetera. 
+You may *reference* demo programs from books or the web, and *include* popular web libraries like Bootstrap, JQuery, Backbone, React, Meteor, etcetera.
 
 Please *do not* use libraries on top of d3, however. Libraries like nvd3.js look tempting, but such libraries often have poor defaults and result in poor visualizations.
 Instead, draw from the numerous existing d3 examples on the web.
@@ -116,7 +128,7 @@ GitHub Details
 ---
 
 - Fork the repo. You now have a copy associated with your username.
-- Make changes to index.html to fulfill the project requirements. 
+- Make changes to index.html to fulfill the project requirements.
 - Make sure your "master" branch matches your "gh-pages" branch. See the GitHub Guides referenced above if you need help.
 - Edit the README.md with a link to your gh-pages site: for example http://YourUsernameGoesHere.github.io/DataVisFinal/index.html
 - To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
