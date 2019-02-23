@@ -9,6 +9,11 @@ On Windows: `set DEBUG=final-project:* & npm run devstart`
 
 If build fails, run `heroku logs` to see error
 
+# Merge conflict with package-lock.json
+1) Delete package-lock.json
+2) Run `npm i`
+3) Run `git commit`
+
 Final Project - Interactive Data Visualization  
 ===
 
