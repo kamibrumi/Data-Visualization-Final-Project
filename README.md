@@ -2,6 +2,13 @@
 On UNIX: `DEBUG=final-project:* npm run devstart`  
 On Windows: `set DEBUG=final-project:* & npm run devstart`
 
+# Pushing to Heroku
+1) Push all desired code to master branch of git repo
+2) Run `git push heroku master`
+3) Run `heroku open`
+
+If build fails, run `heroku logs` to see error
+
 Final Project - Interactive Data Visualization  
 ===
 
