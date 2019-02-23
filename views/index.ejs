@@ -6,21 +6,26 @@
 
         <script src="https://d3js.org/d3.v5.min.js"></script>
 
-        <link rel='stylesheet' href='/stylesheets/style.css'/>
-        <script src="/javascript/index.js"></script>
-
     </head>
 
     <body onload="init()">
 
-        <link rel="stylesheet" href="/stylesheets/treestyle.css"/>
-        <script src="/javascript/tree.js"></script>
+    <div width = "100%"; height = "400px">
+        <div width = "50%" height = "400px" style="float:left">
+            <link rel='stylesheet' href='/stylesheets/style.css'/>
+            <script src="/javascript/index.js"></script>
+            <h1><%= title %></h1>
+            <input id="artistInput" name="artistInput" type="text" placeholder="artist">
+            <input id="trackInput" name="trackInput" type="text" placeholder="song">
+            <input id="findSimilar" type="submit" value="Find">
+            <pre id="similarSongs"></pre>
+        </div >
+        <div width = "50%" height = "400px" style="float:right">
+            <link rel="stylesheet" href="/stylesheets/treestyle.css"/>
+            <script src="/javascript/tree.js"></script>
+        </div>
+    </div>
 
-        <h1><%= title %></h1>
-        <input id="artistInput" name="artistInput" type="text" placeholder="artist">
-        <input id="trackInput" name="trackInput" type="text" placeholder="song">
-        <input id="findSimilar" type="submit" value="Find">
-        <pre id="similarSongs"></pre>
 
     </body>
 
