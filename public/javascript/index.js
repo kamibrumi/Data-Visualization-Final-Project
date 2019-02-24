@@ -18,6 +18,7 @@ findSimilar = () => {
 };
 
 function getSimilar() {
+    const response = this.responseText;
     document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(this.responseText));
 }
 
