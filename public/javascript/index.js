@@ -20,7 +20,7 @@ findSimilar = (artist, track) => {
     let xhr = new XMLHttpRequest();
     xhr.onload = () => {
         document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
-        return xhr.responseText;
+        return JSON.parse(xhr.responseText);
     };
     xhr.open("GET", "/similar" + queryStr);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
