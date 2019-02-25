@@ -5,6 +5,8 @@ function callGetSimilar() {
 
 function drawData(data) {
 
+    document.getElementById("treeChart").innerHTML = "";
+
     data = JSON.parse(data);
 
     // set the dimensions and margins of the diagram
@@ -25,14 +27,14 @@ function drawData(data) {
     // append the svg obgect to the body of the page
     // appends a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
-    svg = d3.select("body").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom),
-        g = svg.append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
+    let svg = d3.select("#treeChart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
 
-    console.log(d3.select("body").append("svg"));
+    let g = svg.append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
 
     // adds the links between the nodes
     var link = g.selectAll(".link")
