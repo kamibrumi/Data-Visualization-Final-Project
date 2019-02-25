@@ -14,7 +14,7 @@ usrFindSimilar = () => {
     findSimilar(artist, track)
 };
 
-findSimilar = (artist, track) => {
+export function findSimilar (artist, track) {
     let queryStr = "";
     queryStr = "?artist=" + artist + "&track=" + track;
     let xhr = new XMLHttpRequest();
@@ -25,7 +25,7 @@ findSimilar = (artist, track) => {
     xhr.open("GET", "/similar" + queryStr);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send()
-};
+}
 
 /*
 * TAKEN FROM: https://blog.centerkey.com/2013/05/javascript-colorized-pretty-print-json.html
