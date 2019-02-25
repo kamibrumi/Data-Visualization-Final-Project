@@ -14,13 +14,13 @@ usrFindSimilar = () => {
     findSimilar(artist, track)
 };
 
-export function findSimilar (artist, track) {
+findSimilar = (artist, track)  => {
     let queryStr = "";
     queryStr = "?artist=" + artist + "&track=" + track;
     let xhr = new XMLHttpRequest();
     xhr.onload = () => {
-        document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
-        return JSON.parse(xhr.responseText);
+        drawData(xhr.responseText);
+        //document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
     };
     xhr.open("GET", "/similar" + queryStr);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
