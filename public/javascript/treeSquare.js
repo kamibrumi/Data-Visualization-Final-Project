@@ -10,6 +10,7 @@
 function drawTreeMap(data) {
 var el_id = 'chart';
 var obj = document.getElementById(el_id);
+obj.innerHTML = "";
 var divWidth = obj.offsetWidth;
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
     width = divWidth -25,
