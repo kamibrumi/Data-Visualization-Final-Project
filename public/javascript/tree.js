@@ -62,7 +62,11 @@ function drawData(data) {
 
     // adds the circle to the node
     node.append("circle")
-        .attr("r", 10);
+        .attr("r", 10)
+        .on("click", function(d) {
+            console.log(d.data);
+            drawTreeMap(d.data);
+    });
 
     // adds the text to the node
     node.append("text")

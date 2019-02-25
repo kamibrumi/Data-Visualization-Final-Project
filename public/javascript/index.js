@@ -29,6 +29,7 @@ findSimilar = (artist, track)  => {
     let xhr = new XMLHttpRequest();
     xhr.onload = () => {
         drawData(xhr.responseText);
+        drawTreeMap(JSON.parse(xhr.responseText));
         //document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
     };
     xhr.open("GET", "/similar" + queryStr);
