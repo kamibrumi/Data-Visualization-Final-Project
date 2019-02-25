@@ -7,6 +7,7 @@
  * Author: Guglielmo Celata
  * Date: sept 1st 2017
  **/
+function drawTreeMap(data) {
 var el_id = 'chart';
 var obj = document.getElementById(el_id);
 var divWidth = obj.offsetWidth;
@@ -45,7 +46,7 @@ grandparent.append("text")
     .attr("x", 6)
     .attr("y", 6 - margin.top)
     .attr("dy", ".75em");
-d3.json("data/dummydata.json", function(data) {
+
     console.log(data);
     var root = d3.hierarchy(data);
     console.log(root);
@@ -215,4 +216,4 @@ d3.json("data/dummydata.json", function(data) {
             })
             .join(sep);
     }
-});
+}
