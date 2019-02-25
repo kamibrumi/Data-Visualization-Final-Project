@@ -21,7 +21,7 @@ callGetSimilar();
 
 function drawData(data){
 
-    data = JSON.parse(data).track[0];
+    data = JSON.parse(data).children[0];
 
     // set the dimensions and margins of the diagram
     var margin = {top: 40, right: 90, bottom: 50, left: 90},

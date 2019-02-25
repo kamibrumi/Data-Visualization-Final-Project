@@ -19,15 +19,19 @@ router.get('/similar', function(req, res, next) {
 
 function makeSimTree(res, artist, track) {
   let simTracks = {
-    "track": [
+    "name": track,
+    "artist": {
+      "name": artist
+    },
+    "children": [
 
     ]
   };
   getThreeSim(artist, track)
       .then(async (response) => {
-        simTracks.track = JSON.parse(response).similartracks.track;
+        simTracks.children = JSON.parse(response).similartracks.track;
 
-        let finalArray = simTracks.track.map(async(t) => {
+        let finalArray = simTracks.children.map(async(t) => {
           const result = await getThreeSim(t.artist.name, t.name);
           t["children"] = JSON.parse(result).similartracks.track;
           return result;
@@ -63,7 +67,7 @@ function getThreeSim(artist, track) {
         statusText: xhr.statusText
       });
     };
-    xhr.open("GET", "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artist + "&track=" + track + "&api_key="  + API_KEY + "&limit=3" + "&format=json", true);
+    xhr.open("GET", "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artist + "&track=" + track + "&api_key="  + API_KEY + "&limit=3&autocorrect=1" + "&format=json", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send();
   })
