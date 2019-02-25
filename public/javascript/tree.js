@@ -1,8 +1,7 @@
 function callGetSimilar() {
-    findSimilar(usrFindSimilar().artist, usrFindSimilar().track);
+    const input = userInput();
+    findSimilar(input.artist, input.track);
 }
-
-callGetSimilar();
 
 function drawData(data) {
 
@@ -26,12 +25,14 @@ function drawData(data) {
     // append the svg obgect to the body of the page
     // appends a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
-    var svg = d3.select("body").append("svg")
+    svg = d3.select("body").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom),
         g = svg.append("g")
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
+
+    console.log(d3.select("body").append("svg"));
 
     // adds the links between the nodes
     var link = g.selectAll(".link")
@@ -71,6 +72,7 @@ function drawData(data) {
         .text(function (d) {
             return d.data.name;
         });
+
 }
 
 
