@@ -2,7 +2,7 @@ init = () => {
   document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
 };
 
-usrFindSimilar = () => {
+function userInput(){
     const usrArtist = document.getElementById("artistInput").value;
     const usrTrack = document.getElementById("trackInput").value;
     let artist = "Amon Amarth";
@@ -11,7 +11,16 @@ usrFindSimilar = () => {
         artist = usrArtist;
         track = usrTrack;
     }
-    findSimilar(artist, track)
+
+    return {
+        "artist": artist,
+        "track": track
+    }
+}
+
+usrFindSimilar = () => {
+    const info = userInput();
+    findSimilar(info.artist, info.track)
 };
 
 findSimilar = (artist, track)  => {
