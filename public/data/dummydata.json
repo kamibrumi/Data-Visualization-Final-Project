@@ -1,5 +1,9 @@
 {
-  "track": [
+  "name": "Master of Puppets",
+  "artist": {
+    "name": "Metallica"
+  },
+  "children": [
     {
       "name": "Master of Puppets",
       "playcount": 7830334,
