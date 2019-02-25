@@ -18,17 +18,14 @@ findSimilar = (artist, track) => {
     let queryStr = "";
     queryStr = "?artist=" + artist + "&track=" + track;
     let xhr = new XMLHttpRequest();
-    xhr.addEventListener("load", getSimilar);
+    xhr.onload = () => {
+        document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
+        return xhr.responseText;
+    };
     xhr.open("GET", "/similar" + queryStr);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send()
 };
-
-function getSimilar() {
-    const response = this.responseText;
-    document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(this.responseText));
-    return response;
-}
 
 /*
 * TAKEN FROM: https://blog.centerkey.com/2013/05/javascript-colorized-pretty-print-json.html
