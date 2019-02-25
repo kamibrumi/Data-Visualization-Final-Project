@@ -30,10 +30,10 @@ function makeSimTree(res, artist, track) {
   getThreeSim(artist, track)
       .then(async (response) => {
         simTracks.children = JSON.parse(response).similartracks.track;
-
         let finalArray = simTracks.children.map(async(t) => {
           const result = await getThreeSim(t.artist.name, t.name);
           t["children"] = JSON.parse(result).similartracks.track;
+          delete t.playcount;
           return result;
         });
         // needed so that response is not sent until each iteration of loop has completed and received response
