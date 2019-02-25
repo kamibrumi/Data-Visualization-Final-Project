@@ -1,15 +1,22 @@
 init = () => {
-  document.getElementById("findSimilar").addEventListener("click", findSimilar, true);
+  document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
 };
 
-findSimilar = () => {
-    const artist = document.getElementById("artistInput").value;
-    const track = document.getElementById("trackInput").value;
-    let queryStr = "";
-    if (artist && track){
-        queryStr = "?artist=" + artist + "&track=" + track
+usrFindSimilar = () => {
+    const usrArtist = document.getElementById("artistInput").value;
+    const usrTrack = document.getElementById("trackInput").value;
+    let artist = "Amon Amarth";
+    let track = "Annihilation of Hammerfest";
+    if (usrArtist && usrTrack) {
+        artist = usrArtist;
+        track = usrTrack;
     }
-    console.log("Query str: " + queryStr);
+    findSimilar(artist, track)
+};
+
+findSimilar = (artist, track) => {
+    let queryStr = "";
+    queryStr = "?artist=" + artist + "&track=" + track;
     let xhr = new XMLHttpRequest();
     xhr.addEventListener("load", getSimilar);
     xhr.open("GET", "/similar" + queryStr);

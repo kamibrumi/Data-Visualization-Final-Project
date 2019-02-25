@@ -10,8 +10,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/similar', function(req, res, next) {
-  let artist = "rick astley";
-  let track = "never gonna give you up";
   if(req.query && req.query.artist && req.query.track){
     artist = req.query.artist;
     track = req.query.track;
@@ -31,7 +29,7 @@ function makeSimTree(res, artist, track) {
 
         let finalArray = simTracks.track.map(async(t) => {
           const result = await getThreeSim(t.artist.name, t.name);
-          t["children"] = JSON.parse(result);
+          t["children"] = JSON.parse(result).similartracks.track;
           return result;
         });
         // needed so that response is not sent until each iteration of loop has completed and received response
