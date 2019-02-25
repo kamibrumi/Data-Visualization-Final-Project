@@ -1,4 +1,3 @@
-
 /**
  * Interactive, zoomable treemap, using D3 v4
  *
@@ -46,12 +45,13 @@ grandparent.append("text")
     .attr("x", 6)
     .attr("y", 6 - margin.top)
     .attr("dy", ".75em");
-d3.json("/data/budget-data.json", function(data) {
+d3.json("data/dummydata.json", function(data) {
+    console.log(data);
     var root = d3.hierarchy(data);
     console.log(root);
     treemap(root
         .sum(function (d) {
-            return d.value;
+            return d.playcount;
         })
         .sort(function (a, b) {
             return b.height - a.height || b.value - a.value
