@@ -35,7 +35,7 @@ let svg = d3.select('#'+el_id).append("svg")
     .style("margin.right", -margin.right + "px")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    .attr("id", "root")
+    .attr("id", "rootGroup")
     .style("shape-rendering", "crispEdges");
 
 function newTreeMap(artist, track) {
@@ -48,16 +48,17 @@ function drawTreeMap(artist, track) {
             data = JSON.parse(data);
             console.log(data);
             var grandparent = svg.append("g")
-                .attr("class", "grandparent");
-            grandparent.append("rect")
-                .attr("y", -margin.top)
-                .attr("width", width)
-                .attr("height", margin.top)
-                .attr("fill", '#bbbbbb');
-            grandparent.append("text")
-                .attr("x", 6)
-                .attr("y", 6 - margin.top)
-                .attr("dy", ".75em");
+                .attr("class", "grandparent")
+                .attr("id", "rootGrandparent");
+            // grandparent.append("rect")
+            //     .attr("y", -margin.top)
+            //     .attr("width", width)
+            //     .attr("height", margin.top)
+            //     .attr("fill", '#bbbbbb');
+            // grandparent.append("text")
+            //     .attr("x", 6)
+            //     .attr("y", 6 - margin.top)
+            //     .attr("dy", ".75em");
             var d = d3.hierarchy(data);
             treemap(d
                 .sum(function (d) {
@@ -79,8 +80,8 @@ function drawTreeMap(artist, track) {
                 grandparent
                     .datum(d.parent)
                     .on("click", transition)
-                    .select("text")
-                    .text(name(d));
+                    // .select("text")
+                    // .text(name(d));
                 // grandparent color
                 grandparent
                     .datum(d.parent)
@@ -137,17 +138,59 @@ function drawTreeMap(artist, track) {
                         .then((newChildren) => {
                             newChildren = JSON.parse(newChildren);
                             //display(newChildren);
-                            const root = d3.hierarchy(newChildren);
-                            treemap(root
-                                .sum(function (d) {
-                                    return d.playcount;
-                                })
-                                .sort(function (a, b) {
-                                    return b.height - a.height || b.value - a.value
-                                })
-                            );
-                            display(root);
-                            return;
+
+                            if (transitioning || !d) return;
+                            transitioning = true;
+                            var g2 = display(d),
+                                t1 = g1.transition().duration(650),
+                                t2 = g2.transition().duration(650);
+                            // Update the domain only after entering new elements.
+                            x.domain([d.x0, d.x1]);
+                            y.domain([d.y0, d.y1]);
+                            // Enable anti-aliasing during the transition.
+                            svg.style("shape-rendering", null);
+                            // Draw child nodes on top of parent nodes.
+                            svg.selectAll(".depth").sort(function (a, b) {
+                                return a.depth - b.depth;
+                            });
+                            // Fade-in entering text.
+                            g2.selectAll("text").style("fill-opacity", 0);
+                            g2.selectAll("foreignObject div").style("display", "none");
+                            /*added*/
+                            // Transition to the new view.
+                            t1.selectAll("text").call(text).style("fill-opacity", 0);
+                            t2.selectAll("text").call(text).style("fill-opacity", 1);
+                            t1.selectAll("rect").call(rect);
+                            t2.selectAll("rect").call(rect);
+                            /* Foreign object */
+                            t1.selectAll(".textdiv").style("display", "none");
+                            /* added */
+                            t1.selectAll(".foreignobj").call(foreign);
+                            /* added */
+                            t2.selectAll(".textdiv").style("display", "block");
+                            /* added */
+                            t2.selectAll(".foreignobj").call(foreign);
+                            /* added */
+                            // Remove the old node when the transition is finished.
+                            t1.on("end.remove", function () {
+
+                                transitioning = false;
+                                x.domain([0, width]);
+                                y.domain([0, height]);
+                                const root = d3.hierarchy(newChildren);
+                                treemap(root
+                                    .sum(function (d) {
+                                        return d.playcount;
+                                    })
+                                    .sort(function (a, b) {
+                                        return b.height - a.height || b.value - a.value
+                                    })
+                                );
+                                document.getElementById("rootGroup").innerHTML = "";
+                                display(root);
+                                this.remove();
+                                //drawTreeMap(artist, track);
+                            });
                         });
                 }
 
