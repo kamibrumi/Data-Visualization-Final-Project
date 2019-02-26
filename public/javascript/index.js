@@ -20,22 +20,34 @@ function userInput(){
 
 usrFindSimilar = () => {
     const info = userInput();
-    findSimilar(info.artist, info.track)
+    newTreeMap(info.artist, info.track)
 };
 
-findSimilar = (artist, track)  => {
-    let queryStr = "";
-    queryStr = "?artist=" + artist + "&track=" + track;
-    let xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        drawData(xhr.responseText);
-        drawTreeMap(JSON.parse(xhr.responseText));
-        //document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
-    };
-    xhr.open("GET", "/similar" + queryStr);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send()
-};
+function findSimilar(artist, track) {
+    return new Promise(function (resolve, reject) {
+        let queryStr = "";
+        queryStr = "?artist=" + artist + "&track=" + track;
+        let xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(xhr.responseText);
+                } else {
+                    reject({
+                        status: this.status,
+                        statusText: xhr.statusText
+                    });
+                    console.error(xhr.statusText);
+                }
+            }
+            //drawTreeMap(JSON.parse(xhr.responseText));
+            //document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
+        };
+        xhr.open("GET", "/similar" + queryStr);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send()
+    });
+}
 
 /*
 * TAKEN FROM: https://blog.centerkey.com/2013/05/javascript-colorized-pretty-print-json.html

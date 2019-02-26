@@ -14,6 +14,9 @@ If build fails, run `heroku logs` to see error
 2) Run `npm i`
 3) Run `git commit`
 
+# GAME IDEA
+Have timer, person to find largest number wins
+
 Final Project - Interactive Data Visualization  
 ===
 
