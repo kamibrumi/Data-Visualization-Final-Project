@@ -1,6 +1,8 @@
-function callGetSimilar() {
-    const input = userInput();
-    findSimilar(input.artist, input.track);
+function newTree(artist, track) {
+
+    findSimilar(artist, track).then((data) => {
+        drawData(data)
+    })
 }
 
 function drawData(data) {

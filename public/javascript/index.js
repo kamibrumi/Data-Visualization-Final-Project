@@ -20,7 +20,8 @@ function userInput(){
 
 usrFindSimilar = () => {
     const info = userInput();
-    newTreeMap(info.artist, info.track)
+    newTreeMap(info.artist, info.track);
+    newTree(info.artist, info.track);
 };
 
 function findSimilar(artist, track) {
