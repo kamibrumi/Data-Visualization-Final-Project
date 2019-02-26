@@ -3,6 +3,7 @@ const router = express.Router();
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const API_KEY = "655ebfb5fd6756447fdfcb2748a8de06";
+const LIMIT = 5;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -67,7 +68,7 @@ function getThreeSim(artist, track) {
         statusText: xhr.statusText
       });
     };
-    xhr.open("GET", "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artist + "&track=" + track + "&api_key="  + API_KEY + "&limit=3&autocorrect=1" + "&format=json", true);
+    xhr.open("GET", "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artist + "&track=" + track + "&api_key="  + API_KEY + "&limit=" + LIMIT + "&autocorrect=1" + "&format=json", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send();
   })
