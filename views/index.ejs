@@ -8,14 +8,28 @@
         <script src="/javascript/index.js"></script>
     </head>
     <body onload="init()">
-        <h1><%= title %></h1>
-        <input id="artistInput" name="artistInput" type="text" placeholder="artist">
-        <input id="trackInput" name="trackInput" type="text" placeholder="song">
-        <input id="findSimilar" type="submit" value="Find">
-        <p id="chart"></p>
-        <p id = "treeChart"></p>
-        <script src="/javascript/tree.js"></script>
-        <script src="/javascript/treeSquare.js"></script>
+
+        <div style="text-align:center">
+            <h1><%= title %></h1>
+            <input id="artistInput" name="artistInput" type="text" placeholder="artist">
+            <input id="trackInput" name="trackInput" type="text" placeholder="song">
+            <input id="findSimilar" type="submit" value="Find">
+        </div>
+
+
+        <div>
+            <div style="width: 50%; float:left">
+                <p id="chart"></p>
+                <script src="/javascript/treeSquare.js"></script>
+            </div>
+
+            <div style="width: 50%; float:right">
+                <p id = "treeChart"></p>
+                <script src="/javascript/tree.js"></script>
+            </div>
+        </div>
+
+
         <pre id="similarSongs"></pre>
     </body>
 </html>
