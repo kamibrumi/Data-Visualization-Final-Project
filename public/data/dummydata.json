@@ -1,595 +1,596 @@
 {
-  "name": "Master of Puppets",
-  "artist": {
-    "name": "Metallica"
-  },
-  "children": [
+  "revision": "884570935",
+  "tid": "90aa7390-36ae-11e9-9b82-7cadb867379e",
+  "reference_lists": [
     {
-      "name": "Master of Puppets",
-      "match": 1,
-      "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-      "duration": 515,
-      "artist": {
-        "name": "Metallica",
-        "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-        "url": "https://www.last.fm/music/Metallica"
+      "id": "#mwt413",
+      "section_heading": {
+        "id": "References",
+        "html": "References"
       },
-      "children": [
-        {
-          "name": "Master of Puppets",
-          "match": 1,
-          "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-          "duration": 515,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Blackened",
-          "match": 0.966816,
-          "url": "https://www.last.fm/music/Metallica/_/Blackened",
-          "duration": 0,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Hangar 18",
-          "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-          "match": 0.324585,
-          "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-          "duration": 315,
-          "artist": {
-            "name": "Megadeth",
-            "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-            "url": "https://www.last.fm/music/Megadeth"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Blackened",
-      "match": 0.966816,
-      "url": "https://www.last.fm/music/Metallica/_/Blackened",
-      "duration": 0,
-      "artist": {
-        "name": "Metallica",
-        "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-        "url": "https://www.last.fm/music/Metallica"
-      },
-      "children": [
-        {
-          "name": "Master of Puppets",
-          "match": 1,
-          "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-          "duration": 515,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Blackened",
-          "match": 0.966816,
-          "url": "https://www.last.fm/music/Metallica/_/Blackened",
-          "duration": 0,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Hangar 18",
-          "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-          "match": 0.324585,
-          "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-          "duration": 315,
-          "artist": {
-            "name": "Megadeth",
-            "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-            "url": "https://www.last.fm/music/Megadeth"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Hangar 18",
-      "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-      "match": 0.324585,
-      "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-      "duration": 315,
-      "artist": {
-        "name": "Megadeth",
-        "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-        "url": "https://www.last.fm/music/Megadeth"
-      },
-      "children": [
-        {
-          "name": "Master of Puppets",
-          "match": 1,
-          "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-          "duration": 515,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Blackened",
-          "match": 0.966816,
-          "url": "https://www.last.fm/music/Metallica/_/Blackened",
-          "duration": 0,
-          "artist": {
-            "name": "Metallica",
-            "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-            "url": "https://www.last.fm/music/Metallica"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Hangar 18",
-          "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-          "match": 0.324585,
-          "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-          "duration": 315,
-          "artist": {
-            "name": "Megadeth",
-            "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-            "url": "https://www.last.fm/music/Megadeth"
-          },
-          "children": [
-            {
-              "name": "Master of Puppets",
-              "playcount": 7830334,
-              "match": 1,
-              "url": "https://www.last.fm/music/Metallica/_/Master+of+Puppets",
-              "duration": 515,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Blackened",
-              "playcount": 2831177,
-              "match": 0.966816,
-              "url": "https://www.last.fm/music/Metallica/_/Blackened",
-              "duration": 0,
-              "artist": {
-                "name": "Metallica",
-                "mbid": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-                "url": "https://www.last.fm/music/Metallica"
-              },
-              "children": [
-
-              ]
-            },
-            {
-              "name": "Hangar 18",
-              "playcount": 2531082,
-              "mbid": "b2f2926f-cb9f-45bb-8cdc-e3e83908e828",
-              "match": 0.324585,
-              "url": "https://www.last.fm/music/Megadeth/_/Hangar+18",
-
-              "duration": 315,
-              "artist": {
-                "name": "Megadeth",
-                "mbid": "a9044915-8be3-4c7e-b11f-9e2d2ea0a91e",
-                "url": "https://www.last.fm/music/Megadeth"
-              },
-              "children": [
-
-              ]
-            }
-          ]
-        }
+      "order": [
+        "1",
+        "Foulger-2",
+        "3",
+        "4",
+        "5",
+        "Ulysses-6",
+        "mesic-7",
+        "8",
+        "9",
+        "10",
+        "esa-11",
+        "Decker-12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "Nelson2016-17",
+        "VolcWorldDormant-18",
+        "chesner1991-19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "ESAmarsvolcanoes-37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
       ]
     }
-  ]
+  ],
+  "references_by_id": {
+    "1": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-1",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">NSTA Press / Archive.Org (2007). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20120913041924/http://www.enviroliteracy.org/nsfmod/NaturesFury.pdf\">\"Earthquakes, Volcanoes, and Tsunamis\"</a> <span class=\"cs1-format\">(PDF)</span>. <i>Resources for Environmental Literacy</i>. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://enviroliteracy.org/nsfmod/NaturesFury.pdf\">the original</a> <span class=\"cs1-format\">(PDF)</span> on September 13, 2012<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">April 22,</span> 2014</span>.</cite><style data-mw-deduplicate=\"TemplateStyles:r879151008\" typeof=\"mw:Extension/templatestyles\">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:\"\\\"\"\"\\\"\"\"'\"\"'\"}.mw-parser-output .citation .cs1-lock-free a{background:url(\"//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png\")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url(\"//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png\")no-repeat;background-position:right .1em center}.mw-parser-output .citation .cs1-lock-subscription a{background:url(\"//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png\")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url(\"//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png\")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style>",
+        "type": "web"
+      }
+    },
+    "3": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-3",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">Young, Davis A. (January 2016). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20151112071530/http://press.princeton.edu/chapters/s7694.html\">\"Volcano\"</a>. <i>Mind over Magma: The Story of Igneous Petrology</i>. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://press.princeton.edu/chapters/s7694.html\">the original</a> on November 12, 2015<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">January 11,</span> 2016</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt11\">",
+        "type": "web"
+      }
+    },
+    "4": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-4",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Wood, C.A. (1979). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/full/1979LPI....10.1370W\">\"Cindercones on Earth, Moon and Mars\"</a>. <i>Lunar and Planetary Science</i>. <b>X</b>: 1370–1372. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/1979LPI....10.1370W\">1979LPI....10.1370W</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt30\">",
+        "type": "journal"
+      }
+    },
+    "5": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-5",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Meresse, S.; Costard, F.O.; Mangold, N.; Masson, P.; Neukum, G. (2008). \"Formation and evolution of the chaotic terrains by subsidence and magmatism: Hydraotes Chaos, Mars\". <i>Icarus</i>. <b>194</b> (2): 487. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2008Icar..194..487M\">2008Icar..194..487M</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1016%2Fj.icarus.2007.10.023\">10.1016/j.icarus.2007.10.023</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt31\">",
+        "type": "journal"
+      }
+    },
+    "8": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-8",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Lockwood, John P.; Hazlett, Richard W. (2010). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://books.google.com/?id=eJopFDVRgYMC&amp;pg=PA115&amp;dq\"><i>Volcanoes: Global Perspectives</i></a>. p.<span>&nbsp;</span>552. <a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/978-1-4051-6250-0\" title=\"Special:BookSources/978-1-4051-6250-0\">978-1-4051-6250-0</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt40\">",
+        "type": "book"
+      }
+    },
+    "9": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-9",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "Berger, Melvin, Gilda Berger, and Higgins Bond. \"Volcanoes-why and how .\" Why do volcanoes blow their tops?: Questions and answers about volcanoes and earthquakes. New York: Scholastic, 1999. 7. Print.",
+        "type": "generic"
+      }
+    },
+    "10": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-10",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Casq, R.A.F.; Wright, J.V. (1987). <i>Volcanic Successions</i>. Unwin Hyman Inc. p.<span>&nbsp;</span>528. <a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/978-0-04-552022-0\" title=\"Special:BookSources/978-0-04-552022-0\">978-0-04-552022-0</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt50\">",
+        "type": "book"
+      }
+    },
+    "13": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-13",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Tilling, Robert I. (1997). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://pubs.usgs.gov/gip/volc/environments.html\">\"Volcano environments\"</a>. <i>Volcanoes</i>. Denver, Colorado: U.S. Department of the Interior, U.S. Geological Survey<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">August 16,</span> 2012</span>. <q>There are more than 500 active volcanoes (those that have erupted at least once within recorded history) in the world</q></cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt77\">",
+        "type": "book"
+      }
+    },
+    "14": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-14",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.volcanodiscovery.com/558.html\">\"The most active volcanoes in the world\"</a>. VolcanoDiscovery.com<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">3 August</span> 2013</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt87\">",
+        "type": "web"
+      }
+    },
+    "15": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-15",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Hussey, John (2014-07-31). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://books.google.com/?id=NhHvAwAAQBAJ&amp;pg=PT2199&amp;lpg=PT2199&amp;dq=Mount+Yasur,+in+Vanuatu,+has+been+erupting+%22nearly+continuously%22+for+over+800+years.#v=onepage&amp;q=Mount%20Yasur,%20in%20Vanuatu,%20has%20been%20erupting%20%22nearly%20continuously%22%20for%20over%20800%20years.&amp;f=false\"><i>Bang to Eternity and Betwixt: Cosmos</i></a>. John Hussey.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt91\">",
+        "type": "book"
+      }
+    },
+    "16": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-16",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.livescience.com/29790-worlds-five-most-active-volcanoes.html\">\"The World's Five Most Active Volcanoes\"</a>. livescience.com<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">4 August</span> 2013</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt94\">",
+        "type": "web"
+      }
+    },
+    "20": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-20",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.volcanolive.com/alerts.html\">\"Volcanic Alert Levels of Various Countries\"</a>. Volcanolive.com<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">August 22,</span> 2011</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt105\">",
+        "type": "web"
+      }
+    },
+    "21": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-21",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Aiuppa, Alessandro; Moretti, Roberto; Federico, Cinzia; Giudice, Gaetano; Gurrieri, Sergio; Liuzzo, Marco; Papale, Paolo; Shinohara, Hiroshi; Valenza, Mariano (2007). \"Forecasting Etna eruptions by real-time observation of volcanic gas composition\". <i>Geology</i>. <b>35</b> (12): 1115–1118. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2007Geo....35.1115A\">2007Geo....35.1115A</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1130%2FG24149A.1\">10.1130/G24149A.1</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt109\">",
+        "type": "journal"
+      }
+    },
+    "22": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-22",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Pedone, M.; Aiuppa, A.; Giudice, G.; Grassa, F.; Francofonte, V.; Bergsson, B.; Ilyinskaya, E. (2014). \"Tunable diode laser measurements of hydrothermal/volcanic CO2 and implications for the global CO2 budget\". <i>Solid Earth</i>. <b>5</b> (2): 1209–1221. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2014SolE....5.1209P\">2014SolE....5.1209P</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.5194%2Fse-5-1209-2014\">10.5194/se-5-1209-2014</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt111\">",
+        "type": "journal"
+      }
+    },
+    "23": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-23",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Miles, M.G.; Grainger, R.G.; Highwood, E.J. (2004). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://eodg.atm.ox.ac.uk/eodg/papers/2004Miles1.pdf\">\"The significance of volcanic eruption strength and frequency for climate\"</a> <span class=\"cs1-format\">(PDF)</span>. <i>Quarterly Journal of the Royal Meteorological Society</i>. <b>130</b> (602): 2361–2376. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2004QJRMS.130.2361M\">2004QJRMS.130.2361M</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1256%2Fqj.03.60\">10.1256/qj.03.60</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt116\">",
+        "type": "journal"
+      }
+    },
+    "24": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-24",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">University of California – Davis (April 25, 2008). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://www.sciencedaily.com/releases/2008/04/080423135236.htm\">\"Volcanic Eruption Of 1600 Caused Global Disruption\"</a>. <i>ScienceDaily</i>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt117\">",
+        "type": "web"
+      }
+    },
+    "25": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-25",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://www.sciencedaily.com/releases/2009/11/091123142739.htm\">\"Supervolcano eruption – in Sumatra – deforested India 73,000 years ago\"</a>. <i>ScienceDaily</i>. November 24, 2009.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt121\">",
+        "type": "web"
+      }
+    },
+    "26": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-26",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation news\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20060326004611/http://www.bbc.co.uk/sn/prehistoric_life/human/human_evolution/new_batch1.shtml\">\"The new batch – 150,000 years ago\"</a>. BBC. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.bbc.co.uk/sn/prehistoric_life/human/human_evolution/new_batch1.shtml\">the original</a> on 2006-03-26.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt122\">",
+        "type": "news"
+      }
+    },
+    "27": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-27",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation news\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://news.bbc.co.uk/2/hi/science/nature/2975862.stm\">\"When humans faced extinction\"</a>. BBC. June 9, 2003<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">January 5,</span> 2007</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt123\">",
+        "type": "news"
+      }
+    },
+    "28": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-28",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">O'Hanlon, Larry (March 14, 2005). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20050314025022/http://dsc.discovery.com/convergence/supervolcano/others/others_07.html\">\"Yellowstone's Super Sister\"</a>. <i>Discovery Channel</i>. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.discovery.com/convergence/supervolcano/others/others_07.html\">the original</a> on 2005-03-14.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt126\">",
+        "type": "web"
+      }
+    },
+    "29": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-29",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Benton, Michael J. (2005). <i>When Life Nearly Died: The Greatest Mass Extinction of All Time</i>. Thames &amp; Hudson. <a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/978-0-500-28573-2\" title=\"Special:BookSources/978-0-500-28573-2\">978-0-500-28573-2</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt127\">",
+        "type": "book"
+      }
+    },
+    "30": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-30",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<i><a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://books.google.com/books?id=ipNcKc0Mv5IC&amp;pg=PA155\">Volcanoes in human history: the far-reaching effects of major eruptions</a></i>. Jelle Zeilinga de Boer, Donald Theodore Sanders (2002). <a href=\"./Princeton_University_Press\" title=\"Princeton University Press\">Princeton University Press</a>. p. 155. <link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt130\"><a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/0-691-05081-3\" title=\"Special:BookSources/0-691-05081-3\">0-691-05081-3</a>",
+        "type": "generic"
+      }
+    },
+    "31": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-31",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Oppenheimer, Clive (2003). \"Climatic, environmental and human consequences of the largest known historic eruption: Tambora volcano (Indonesia) 1815\". <i>Progress in Physical Geography</i>. <b>27</b> (2): 230–259. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1191%2F0309133303pp379ra\">10.1191/0309133303pp379ra</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt131\">",
+        "type": "journal"
+      }
+    },
+    "32": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-32",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">Ó Gráda, Cormac (February 6, 2009). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20160112061115/http://press.princeton.edu/chapters/s8857.html\">\"Famine: A Short History\"</a>. Princeton University Press. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://press.princeton.edu/chapters/s8857.html\">the original</a> on 2016-01-12.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt133\">",
+        "type": "web"
+      }
+    },
+    "33": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-33",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">McGee, Kenneth A.; Doukas, Michael P.; Kessler, Richard; Gerlach, Terrence M. (May 1997). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://pubs.usgs.gov/of/1997/of97-262/of97-262.html\">\"Impacts of Volcanic Gases on Climate, the Environment, and People\"</a>. United States Geological Survey<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">9 August</span> 2014</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt137\"><figure-inline><span><img src=\"//upload.wikimedia.org/wikipedia/en/thumb/6/62/PD-icon.svg/15px-PD-icon.svg.png\" data-file-width=\"196\" data-file-height=\"196\" data-file-type=\"drawing\" height=\"15\" width=\"15\" srcset=\"//upload.wikimedia.org/wikipedia/en/thumb/6/62/PD-icon.svg/30px-PD-icon.svg.png 2x, //upload.wikimedia.org/wikipedia/en/thumb/6/62/PD-icon.svg/23px-PD-icon.svg.png 1.5x\"></span></figure-inline><span> </span><i>This article incorporates text from this source, which is in the <a href=\"./Public_domain\" title=\"Public domain\">public domain</a>.</i>",
+        "type": "web"
+      }
+    },
+    "34": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-34",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://volcanoes.usgs.gov/Hazards/What/VolGas/volgas.html\">\"Volcanic Gases and Their Effects\"</a>. U.S. Geological Survey<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">June 16,</span> 2007</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt140\">",
+        "type": "web"
+      }
+    },
+    "35": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-35",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Wieczorek, Mark A.; Jolliff, Bradley L.; Khan, Amir; Pritchard, Matthew E.; Weiss, Benjamin P.; Williams, James G.; Hood, Lon L.; Righter, Kevin; Neal, Clive R.; Shearer, Charles K.; McCallum, I. Stewart; Tompkins, Stephanie; Hawke, B. Ray; Peterson, Chris; Gillis, Jeffrey J.; Bussey, Ben (1 January 2006). \"The constitution and structure of the lunar interior\". <i><a href=\"./Reviews_in_Mineralogy_and_Geochemistry\" title=\"Reviews in Mineralogy and Geochemistry\">Reviews in Mineralogy and Geochemistry</a></i>. <b>60</b> (1): 221–364. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2006RvMG...60..221W\">2006RvMG...60..221W</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.2138%2Frmg.2006.60.3\">10.2138/rmg.2006.60.3</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt144\">",
+        "type": "journal"
+      }
+    },
+    "36": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-36",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Bindschadler, D.L. (1995). \"Magellan: A new view of Venus' geology and geophysics\". <i>Reviews of Geophysics</i>. <b>33</b>: 459. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/1995RvGeS..33..459B\">1995RvGeS..33..459B</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1029%2F95RG00281\">10.1029/95RG00281</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt168\">",
+        "type": "journal"
+      }
+    },
+    "38": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-38",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://keckobservatory.org/recent/entry/exceptionally_bright_eruption_on_io_rivals_largest_in_solar_syatem/\">\"Exceptionally bright eruption on Io rivals largest in solar system\"</a>. <i>W.M. Keck Observatory</i>. November 13, 2002.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt181\">",
+        "type": "web"
+      }
+    },
+    "39": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-39",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://web.archive.org/web/20070310211512/http://www.pparc.ac.uk/Nw/enceladus.asp\">\"Cassini Finds an Atmosphere on Saturn's Moon Enceladus\"</a>. <i><a href=\"./PPARC\" title=\"PPARC\" class=\"mw-redirect\">PPARC</a></i>. 16 March 2005. Archived from <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.pparc.ac.uk/Nw/enceladus.asp\">the original</a> on 2007-03-10<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">4 July</span> 2014</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt185\">",
+        "type": "web"
+      }
+    },
+    "40": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-40",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">Smith, Yvette (March 15, 2012). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.nasa.gov/multimedia/imagegallery/image_feature_2198.html\">\"Enceladus, Saturn's Moon\"</a>. <i>Image of the Day Gallery</i>. <a href=\"./NASA\" title=\"NASA\">NASA</a><span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">4 July</span> 2014</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt186\">",
+        "type": "web"
+      }
+    },
+    "41": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-41",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://www.newscientist.com/article.ns?id=dn7489\">\"Hydrocarbon volcano discovered on Titan\"</a>. Newscientist.com. June 8, 2005<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">October 24,</span> 2010</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt187\">",
+        "type": "web"
+      }
+    },
+    "42": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-42",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">Jaggard, Victoria (February 5, 2010). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://news.nationalgeographic.com/news/2010/02/100205-new-type-planet-corot-7b-io/\">\"<span class=\"cs1-kern-left\">\"</span>Super Earth\" May Really Be New Planet Type: Super-Io\"</a>. <i>National Geographic web site daily news</i>. <a href=\"./National_Geographic_Society\" title=\"National Geographic Society\">National Geographic Society</a><span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">March 11,</span> 2010</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt189\">",
+        "type": "web"
+      }
+    },
+    "43": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-43",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Williams, Micheal (November 2007). \"Hearts of fire\". <i>Morning Calm</i> (11–2007): 6.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt193\">",
+        "type": "journal"
+      }
+    },
+    "Foulger-2": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-Foulger_2-0",
+          "text": "1"
+        },
+        {
+          "href": "./Volcano#cite_ref-Foulger_2-1",
+          "text": "2"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Foulger, Gillian R. (2010). <i>Plates vs. Plumes: A Geological Controversy</i>. Wiley-Blackwell. <a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/978-1-4051-6148-0\" title=\"Special:BookSources/978-1-4051-6148-0\">978-1-4051-6148-0</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt9\">",
+        "type": "book"
+      }
+    },
+    "Ulysses-6": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-Ulysses_6-0",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Brož, P.; Hauber, E. (2012). \"A unique volcanic field in Tharsis, Mars: Pyroclastic cones as evidence for explosive eruptions\". <i>Icarus</i>. <b>218</b> (1): 88. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2012Icar..218...88B\">2012Icar..218...88B</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1016%2Fj.icarus.2011.11.030\">10.1016/j.icarus.2011.11.030</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt32\">",
+        "type": "journal"
+      }
+    },
+    "mesic-7": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-mesic_7-0",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Lawrence, S.J.; Stopar, J.D.; Hawke, B.R.; Greenhagen, B.T.; Cahill, J.T.S.; Bandfield, J.L.; Jolliff, B.L.; Denevi, B.W.; Robinson, M.S.; Glotch, T.D.; Bussey, D.B.J.; Spudis, P.D.; Giguere, T.A.; Garry, W.B. (2013). \"LRO observations of morphology and surface roughness of volcanic cones and lobate lava flows in the Marius Hills\". <i>Journal of Geophysical Research: Planets</i>. <b>118</b> (4): 615. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/2013JGRE..118..615L\">2013JGRE..118..615L</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1002%2Fjgre.20060\">10.1002/jgre.20060</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt33\">",
+        "type": "journal"
+      }
+    },
+    "esa-11": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-esa_11-0",
+          "text": "1"
+        },
+        {
+          "href": "./Volcano#cite_ref-esa_11-1",
+          "text": "2"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.esa.int/SPECIALS/Space_for_our_climate/SEM3XU2VQUD_0.html\">\"Volcanoes\"</a>. European Space Agency. 2009<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">August 16,</span> 2012</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt65\">",
+        "type": "web"
+      }
+    },
+    "Decker-12": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-Decker_12-0",
+          "text": "1"
+        },
+        {
+          "href": "./Volcano#cite_ref-Decker_12-1",
+          "text": "2"
+        },
+        {
+          "href": "./Volcano#cite_ref-Decker_12-2",
+          "text": "3"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation book\">Decker, Robert Wayne; Decker, Barbara (1991). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"https://books.google.com/books?id=-P83AAAAIAAJ&amp;pg=PA7\"><i>Mountains of Fire: The Nature of Volcanoes</i></a>. Cambridge University Press. p.<span>&nbsp;</span>7. <a href=\"./International_Standard_Book_Number\" title=\"International Standard Book Number\">ISBN</a><span>&nbsp;</span><a href=\"./Special:BookSources/978-0-521-31290-5\" title=\"Special:BookSources/978-0-521-31290-5\">978-0-521-31290-5</a>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt78\">",
+        "type": "book"
+      }
+    },
+    "Nelson2016-17": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-Nelson2016_17-0",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\">Nelson, Stephen A. (4 October 2016). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.tulane.edu/~sanelson/Natural_Disasters/volhaz&amp;pred.htm\">\"Volcanic Hazards &amp; Prediction of Volcanic Eruptions\"</a>. Tulane University<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">5 September</span> 2018</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt101\">",
+        "type": "web"
+      }
+    },
+    "VolcWorldDormant-18": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-VolcWorldDormant_18-0",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://volcano.oregonstate.edu/how-volcano-defined-being-active-dormant-or-extinct\">\"How is a volcano defined as being active, dormant, or extinct?\"</a>. <i>Volcano World</i>. Oregon State University<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">5 September</span> 2018</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt102\">",
+        "type": "web"
+      }
+    },
+    "chesner1991-19": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-chesner1991_19-0",
+          "text": "↑"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation journal\">Chesner, C.A.; Rose, J.A.; Deino, W.I.; Drake, R.; Westgate, A. (March 1991). <a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.geo.mtu.edu/~raman/papers/ChesnerGeology.pdf\">\"Eruptive History of Earth's Largest Quaternary caldera (Toba, Indonesia) Clarified\"</a> <span class=\"cs1-format\">(PDF)</span>. <i>Geology</i>. <b>19</b> (3): 200–203. <a href=\"./Bibcode\" title=\"Bibcode\">Bibcode</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://adsabs.harvard.edu/abs/1991Geo....19..200C\">1991Geo....19..200C</a>. <a href=\"./Digital_object_identifier\" title=\"Digital object identifier\">doi</a>:<a rel=\"mw:ExtLink\" class=\"external text\" href=\"//doi.org/10.1130%2F0091-7613%281991%29019%3C0200%3AEHOESL%3E2.3.CO%3B2\">10.1130/0091-7613(1991)019<span>&lt;</span>0200:EHOESL<span>&gt;</span>2.3.CO;2</a><span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">January 20,</span> 2010</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt103\">",
+        "type": "journal"
+      }
+    },
+    "ESAmarsvolcanoes-37": {
+      "back_links": [
+        {
+          "href": "./Volcano#cite_ref-ESAmarsvolcanoes_37-0",
+          "text": "1"
+        },
+        {
+          "href": "./Volcano#cite_ref-ESAmarsvolcanoes_37-1",
+          "text": "2"
+        }
+      ],
+      "content": {
+        "html": "<cite class=\"citation web\"><a rel=\"mw:ExtLink\" class=\"external text\" href=\"http://www.esa.int/esaMI/Mars_Express/SEMLF6D3M5E_0.html\">\"Glacial, volcanic and fluvial activity on Mars: latest images\"</a>. <a href=\"./European_Space_Agency\" title=\"European Space Agency\">European Space Agency</a>. February 25, 2005<span class=\"reference-accessdate\">. Retrieved <span class=\"nowrap\">August 17,</span> 2006</span>.</cite><link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r879151008\" about=\"#mwt177\">",
+        "type": "web"
+      }
+    }
+  }
 }
