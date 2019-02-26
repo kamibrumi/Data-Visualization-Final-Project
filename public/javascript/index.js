@@ -3,31 +3,26 @@ init = () => {
 };
 
 function userInput(){
-    const usrArtist = document.getElementById("artistInput").value;
-    const usrTrack = document.getElementById("trackInput").value;
-    let artist = "Amon Amarth";
-    let track = "Annihilation of Hammerfest";
-    if (usrArtist && usrTrack) {
-        artist = usrArtist;
-        track = usrTrack;
+    const usrPage = document.getElementById("pageTitle").value;
+    let page = "Volcano";
+    if (usrPage) {
+        page = usrPage;
     }
 
     return {
-        "artist": artist,
-        "track": track
+        "page": page
     }
 }
 
 usrFindSimilar = () => {
     const info = userInput();
-    newTreeMap(info.artist, info.track);
-    newTree(info.artist, info.track);
+    newTreeMap(info.page);
+    newTree(info.page);
 };
 
-function findSimilar(artist, track) {
+function findSimilar(page) {
     return new Promise(function (resolve, reject) {
-        let queryStr = "";
-        queryStr = "?artist=" + artist + "&track=" + track;
+        let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
         xhr.onload = () => {
             if (xhr.readyState === 4) {
@@ -41,8 +36,6 @@ function findSimilar(artist, track) {
                     console.error(xhr.statusText);
                 }
             }
-            //drawTreeMap(JSON.parse(xhr.responseText));
-            //document.getElementById("similarSongs").innerHTML = prettyPrintJson.toHtml(JSON.parse(xhr.responseText));
         };
         xhr.open("GET", "/similar" + queryStr);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

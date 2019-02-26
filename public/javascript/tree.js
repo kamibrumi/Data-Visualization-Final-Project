@@ -1,6 +1,6 @@
-function newTree(artist, track) {
+function newTree(page) {
 
-    findSimilar(artist, track).then((data) => {
+    findSimilar(page).then((data) => {
         drawData(data)
     })
 }
@@ -78,7 +78,7 @@ function drawData(data) {
         })
         .style("text-anchor", "middle")
         .text(function (d) {
-            return d.data.name;
+            return d.data.title;
         });
 
 }

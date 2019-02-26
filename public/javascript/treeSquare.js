@@ -14,8 +14,7 @@ var divWidth = obj.offsetWidth;
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
     width = divWidth -25,
     height = 600 - margin.top - margin.bottom,
-    formatNumber = d3.format(","),
-    transitioning;
+    formatNumber = d3.format(",");
 // sets x and y scale to determine size of visible boxes
 let x = d3.scaleLinear()
     .domain([0, width])
@@ -38,12 +37,12 @@ let svg = d3.select('#'+el_id).append("svg")
     .attr("id", "root")
     .style("shape-rendering", "crispEdges");
 
-function newTreeMap(artist, track) {
-    drawTreeMap(artist, track);
+function newTreeMap(page) {
+    drawTreeMap(page);
 }
 
-function drawTreeMap(artist, track) {
-    findSimilar(artist, track)
+function drawTreeMap(page) {
+    findSimilar(page)
         .then((data) => {
             data = JSON.parse(data);
             console.log(data);
@@ -61,7 +60,7 @@ function drawTreeMap(artist, track) {
             var d = d3.hierarchy(data);
             treemap(d
                 .sum(function (d) {
-                    return d.playcount;
+                    return d.pageid;
                 })
                 .sort(function (a, b) {
                     return b.height - a.height || b.value - a.value
@@ -70,9 +69,7 @@ function drawTreeMap(artist, track) {
 
             display(d);
 
-
             function display(d) {
-
                 console.log(d);
                 // write text into grandparent
                 // and activate click's handler
@@ -114,7 +111,7 @@ function drawTreeMap(artist, track) {
                     .call(rect)
                     .append("title")
                     .text(function (d) {
-                        return d.data.name;
+                        return d.data.title;
                     });
                 /* Adding a foreign object instead of a text object, allows for text wrapping */
                 g.append("foreignObject")
@@ -124,23 +121,22 @@ function drawTreeMap(artist, track) {
                     .attr("dy", ".75em")
                     .html(function (d) {
                         return '' +
-                            '<p class="title"> <strong>' + d.data.name + '</strong> by ' + d.data.artist.name + '</p>' +
+                            '<p class="title">' + d.data.title + '</p>' +
                             '<p>' + formatNumber(d.value) + '</p>'
                             ;
                     })
                     .attr("class", "textdiv"); //textdiv class allows us to style the text easily with CSS
 
                 async function transition(d) {
-                    const track = d.data.name;
-                    const artist = d.data.artist.name;
-                    findSimilar(artist, track)
+                    const title = d.data.title;
+                    findSimilar(title)
                         .then((newChildren) => {
                             newChildren = JSON.parse(newChildren);
                             //display(newChildren);
                             const root = d3.hierarchy(newChildren);
                             treemap(root
                                 .sum(function (d) {
-                                    return d.playcount;
+                                    return d.pageid;
                                 })
                                 .sort(function (a, b) {
                                     return b.height - a.height || b.value - a.value
@@ -205,7 +201,7 @@ function drawTreeMap(artist, track) {
         var res = "";
         var sep = " > ";
         d.ancestors().reverse().forEach(function(i){
-            res += i.data.name + sep;
+            res += i.data.title + sep;
         });
         return res
             .split(sep)
