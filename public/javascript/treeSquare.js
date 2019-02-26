@@ -124,7 +124,7 @@ function drawTreeMap(artist, track) {
                     .attr("dy", ".75em")
                     .html(function (d) {
                         return '' +
-                            '<p class="title"> ' + d.data.name + '</p>' +
+                            '<p class="title"> <strong>' + d.data.name + '</strong> by ' + d.data.artist.name + '</p>' +
                             '<p>' + formatNumber(d.value) + '</p>'
                             ;
                     })
