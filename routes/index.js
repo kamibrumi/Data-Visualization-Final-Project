@@ -23,15 +23,18 @@ router.get('/refs', function(req, res, next) {
 });
 
 function makeCitations(res, page) {
+  page = page.replace(/['"]+/g, '');
+  console.log("FAKE PAGE: " + page);
   getCitations(page)
       .then((response) => {
         console.log("FINISHED REF");
         res.send(response)
       })
       .catch((err) => {
-        console.error("ERROR FETCHING ROOT CITATIONS");
+        console.error("ERROR FETCHING ROOT REFS NAME");
         console.error("Status code: " + err.status);
         console.error(err.statusText);
+        res.send(err);
       });
 }
 
@@ -110,6 +113,7 @@ function makeSimTree(res, page) {
         console.error("ERROR FETCHING ROOT RELATED");
         console.error("Status code: " + err.status);
         console.error(err.statusText);
+        res.send(err);
       });
 }
 

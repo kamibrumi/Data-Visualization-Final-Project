@@ -1,6 +1,14 @@
 init = () => {
     document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
+    window.addEventListener("keydown", keyPressHandler, true);
 };
+
+function keyPressHandler (e) {
+    switch(e.key){
+        case "Enter":
+            usrFindSimilar();
+    }
+}
 
 function userInput(){
     const usrPage = document.getElementById("pageTitle").value;
@@ -26,55 +34,61 @@ function findSimilar(page) {
     return new Promise(function (resolve, reject) {
         let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
-        xhr.onload = () => {
+        xhr.onload = async () => {
             if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
+                if (xhr.status === 200 && JSON.parse(xhr.responseText).displaytitle) {
                     var index = 0;
-                    findReferences(page)
-                        .then((info) => {
-                            //addEntriesToTimeline(info);
-                            let timeline = document.getElementById("timeline");
-                            timeline.innerHTML = "";
-                            console.log("update timeline?");
-                            var data = JSON.parse(info);
-                            //console.log(data);
-                            var orderList = data.reference_lists[0].order; // this is the list with the identifiers
-                            var references = data.references_by_id; // the references
-                            for (var i = 0; i < orderList.length; i++) {
-                                var htmlData = references[orderList[i]].content.html;
-                                var links = htmlData.match(/href="(.*?)"/g);
 
-                                if (links !== null) {
-                                    let even = index % 2 === 0;
-                                    var citations = "";
-                                    for (var j = 0; j < links.length; j++) {
-                                        var l = links[j].replace(/['"]+/g, '').substr(5);
-                                        var time = 2019;
-                                        if (!l.includes("TemplateStyles")) {
-                                            citations += l + " <br> <br>";
-                                        }
+                    const info = JSON.parse(await findReferences(page));
+                    if (info.reference_lists) {
+                        console.log("REFS PAGE" + page);
+                        //addEntriesToTimeline(info);
+                        let timeline = document.getElementById("timeline");
+                        timeline.innerHTML = "";
+                        console.log("update timeline?");
+                        var data = info;
+                        //console.log(data);
+                        var orderList = data.reference_lists[0].order; // this is the list with the identifiers
+                        var references = data.references_by_id; // the references
+                        for (var i = 0; i < orderList.length; i++) {
+                            var htmlData = references[orderList[i]].content.html;
+                            var links = htmlData.match(/href="(.*?)"/g);
+
+                            if (links !== null) {
+                                let even = index % 2 === 0;
+                                var citations = "";
+                                for (var j = 0; j < links.length; j++) {
+                                    var l = links[j].replace(/['"]+/g, '').substr(5);
+                                    var time = 2019;
+                                    if (!l.includes("TemplateStyles")) {
+                                        citations += l + " <br> <br>";
                                     }
-                                    timeline.innerHTML +=
-                                        `<div class="${even ? 'container right' : 'container left'}">
+                                }
+                                timeline.innerHTML +=
+                                    `<div class="${even ? 'container right' : 'container left'}">
                       <div class="content">
-                        <h2>${index+1}</h2>
+                        <h2>${index + 1}</h2>
                         <p>${citations}</p>
                       </div>
                   
                    </div>`;
-                                    index++;
-                                }
+                                index++;
                             }
-                        })
-                        .catch((err) => {
-                            console.error("Status code: " + err.status);
-                            console.error(err.statusText);
-                        });
+                        }
+                    }
+                    else {
+                        const error = info;
+                        console.error("Status code: " + error.status);
+                        console.error(error.statusText);
+                        alert("Invalid Page Name")
+                    }
                     resolve(xhr.responseText);
                 } else {
+                    const error = JSON.parse(xhr.responseText);
+                    alert("Invalid Page Name");
                     reject({
-                        status: xhr.status,
-                        statusText: xhr.statusText
+                        status: error.status,
+                        statusText: error.statusText
                     });
                     console.error(xhr.statusText);
                 }
