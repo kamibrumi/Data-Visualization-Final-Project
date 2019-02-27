@@ -41,6 +41,24 @@ function newTreeMap(page) {
     drawTreeMap(page);
 }
 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var tm = document.getElementById("treemap");
+
+// Get the offset position of the navbar
+var sticky = tm.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        tm.classList.add("sticky")
+    } else {
+        tm.classList.remove("sticky");
+    }
+}
+
 function drawTreeMap(page) {
     findSimilar(page)
         .then((data) => {
@@ -83,7 +101,7 @@ function drawTreeMap(page) {
                     .datum(d.parent)
                     .select("rect")
                     .attr("fill", function () {
-                        return '#bbbbbb'
+                        return '#817E9F'
                     });
                 var g1 = svg.insert("g", ".grandparent")
                     .datum(d)
@@ -181,7 +199,7 @@ function drawTreeMap(page) {
                 return y(d.y1) - y(d.y0);
             })
             .attr("fill", function (d) {
-                return '#bbbbbb';
+                return '#817E9F';
             });
     }
     function foreign(foreign) { /* added */

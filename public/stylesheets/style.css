@@ -1,3 +1,4 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -17,7 +18,7 @@ text {
   font-weight: bold;
 }
 rect {
-  stroke: #fff;
+  stroke: #EEEEFF;
   stroke-width: 1px;
 }
 rect.parent,
@@ -25,7 +26,7 @@ rect.parent,
   stroke-width: 3px;
 }
 .grandparent:hover rect {
-  fill: grey;
+  fill: #B4B8AB;
 }
 .children rect.parent,
 .grandparent rect {
@@ -57,7 +58,7 @@ rect.parent,
   fill: black;
 }
 .form-group {
-  text-align:left;
+  text-align:middle;
 }
 .textdiv {
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
@@ -67,7 +68,6 @@ rect.parent,
   overflow:none;
 }
 .textdiv .title {
-  font-size: 102%;
   font-weight: bold;
   margin-top: 8px;
   font-size:11px !important;
@@ -77,4 +77,15 @@ rect.parent,
   margin:0 0 4px !important;
   padding:0px;
   font-size:10px !important;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }

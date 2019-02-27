@@ -1,6 +1,14 @@
 init = () => {
     document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
+    window.addEventListener("keydown", keyPressHandler, true);
 };
+
+function keyPressHandler (e) {
+    switch(e.key){
+        case "Enter":
+            usrFindSimilar();
+    }
+}
 
 function userInput(){
     const usrPage = document.getElementById("pageTitle").value;
@@ -27,22 +35,25 @@ function findSimilar(page) {
     return new Promise(function (resolve, reject) {
         let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
-        xhr.onload = () => {
+        xhr.onload = async () => {
             if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
+                if (xhr.status === 200 && JSON.parse(xhr.responseText).displaytitle) {
                     var index = 0;
-                    findReferences(page)
-                        .then((info) => {
-                            let timeline = document.getElementById("timeline");
-                            timeline.innerHTML = "";
-                            console.log("update timeline?");
-                            var data = JSON.parse(info);
-                            var orderList = data.reference_lists[0].order; // this is the list with the identifiers
-                            var references = data.references_by_id; // the references
-                            for (var i = 0; i < orderList.length; i++) {
 
-                                var htmlData = references[orderList[i]].content.html;
-                                var links = htmlData.match(/"http(.*?)"/g);
+                    const info = JSON.parse(await findReferences(page));
+                    if (info.reference_lists) {
+                        console.log("REFS PAGE" + page);
+                        //addEntriesToTimeline(info);
+                        let timeline = document.getElementById("timeline");
+                        timeline.innerHTML = "";
+                        console.log("update timeline?");
+                        var data = info;
+                        //console.log(data);
+                        var orderList = data.reference_lists[0].order; // this is the list with the identifiers
+                        var references = data.references_by_id; // the references
+                        for (var i = 0; i < orderList.length; i++) {
+                            var htmlData = references[orderList[i]].content.html;
+                            var links = htmlData.match(/"http(.*?)"/g);
 
                                 if (links !== null) {
                                     let even = index % 2 === 0;
@@ -74,17 +85,21 @@ function findSimilar(page) {
                                        </div>`;
                                     index++;
                                 }
-                            }
-                        })
-                        .catch((err) => {
-                            console.error("Status code: " + err.status);
-                            console.error(err.statusText);
-                        });
-                    resolve(xhr.responseText);
+                        }
+                        resolve(xhr.responseText);
+                    }
+                    else {
+                        const error = info;
+                        console.error("Status code: " + error.status);
+                        console.error(error.statusText);
+                        alert("Invalid Page Name")
+                    }
                 } else {
+                    const error = JSON.parse(xhr.responseText);
+                    alert("Invalid Page Name");
                     reject({
-                        status: xhr.status,
-                        statusText: xhr.statusText
+                        status: error.status,
+                        statusText: error.statusText
                     });
                     console.error(xhr.statusText);
                 }
