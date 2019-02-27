@@ -149,6 +149,9 @@ function drawTreeMap(page) {
 
                 return g;
             }
+        })
+        .catch((err) => {
+            console.error(err.statusText);
         });
     function text(text) {
         text.attr("x", function (d) {

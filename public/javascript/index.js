@@ -16,25 +16,26 @@ usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
     console.log("user clicked");
-    findReferences(page).then((info) => {
-        //addEntriesToTimeline(info);
-        let timeline = document.getElementById("timeline");
-        console.log("update timeline?");
-        var data = JSON.parse(info);
-        //console.log(data);
-        var orderList = data.reference_lists[0].order; // this is the list with the identifiers
-        var references = data.references_by_id; // the references
-        for (var i = 0; i < orderList.length; i++) {
-            var htmlData = references[orderList[i]].content.html;
-            var links = htmlData.match(/"http(.*?)"/g);
+    findReferences(page)
+        .then((info) => {
+            //addEntriesToTimeline(info);
+            let timeline = document.getElementById("timeline");
+            console.log("update timeline?");
+            var data = JSON.parse(info);
+            //console.log(data);
+            var orderList = data.reference_lists[0].order; // this is the list with the identifiers
+            var references = data.references_by_id; // the references
+            for (var i = 0; i < orderList.length; i++) {
+                var htmlData = references[orderList[i]].content.html;
+                var links = htmlData.match(/"http(.*?)"/g);
 
-            if (links !== null) {
-                let even = index % 2 === 0;
-                for (var j = 0; j < links.length; j++) {
-                    var l = links[j].replace(/['"]+/g, '');
-                    var time = 2019;
-                    timeline.innerHTML +=
-                        `<div class="${even ? 'container right' : 'container left'}">
+                if (links !== null) {
+                    let even = index % 2 === 0;
+                    for (var j = 0; j < links.length; j++) {
+                        var l = links[j].replace(/['"]+/g, '');
+                        var time = 2019;
+                        timeline.innerHTML +=
+                            `<div class="${even ? 'container right' : 'container left'}">
                     <div class="content">
                       <h2>${index+1}</h2>
                       <p>${l}</p>
@@ -42,16 +43,14 @@ usrFindSimilar = () => {
                 
                  </div>`;
 
+                    }
+                    index++;
                 }
-                index++;
-
-
             }
-
-        }
-
-
-    });
+        })
+        .catch((err) => {
+            console.error(err.statusText);
+        })
 };
 
 function findSimilar(page) {
