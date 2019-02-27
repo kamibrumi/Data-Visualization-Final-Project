@@ -61,6 +61,7 @@ function getCitations(page) {
 
 function makeSimTree(res, page) {
   let simPages = {
+    "displaytitle": page.replace(/_/g, ' '),
     "title": page,
     "children": [
 
