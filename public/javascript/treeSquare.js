@@ -101,7 +101,7 @@ function drawTreeMap(page) {
                     .datum(d.parent)
                     .select("rect")
                     .attr("fill", function () {
-                        return '#bbbbbb'
+                        return '#817E9F'
                     });
                 var g1 = svg.insert("g", ".grandparent")
                     .datum(d)
@@ -199,7 +199,7 @@ function drawTreeMap(page) {
                 return y(d.y1) - y(d.y0);
             })
             .attr("fill", function (d) {
-                return '#bbbbbb';
+                return '#817E9F';
             });
     }
     function foreign(foreign) { /* added */
