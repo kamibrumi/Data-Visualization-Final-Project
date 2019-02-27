@@ -8,16 +8,16 @@ function userInput(){
     if (usrPage) {
         page = usrPage;
     }
-
-    return {
-        "page": page
-    }
+    return page;
 }
 
 usrFindSimilar = () => {
-    const info = userInput();
-    newTreeMap(info.page);
-    newTree(info.page);
+    const page = userInput();
+    newTreeMap(page);
+
+    /*findReference(page).then((info) => {
+        use info as data however you want
+    });*/
 };
 
 function findSimilar(page) {
@@ -30,7 +30,7 @@ function findSimilar(page) {
                     resolve(xhr.responseText);
                 } else {
                     reject({
-                        status: this.status,
+                        status: xhr.status,
                         statusText: xhr.statusText
                     });
                     console.error(xhr.statusText);
@@ -39,8 +39,31 @@ function findSimilar(page) {
         };
         xhr.open("GET", "/similar" + queryStr);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send()
-    });
+        xhr.send();
+    })
+}
+
+function findReferences(page) {
+    return new Promise(function (resolve, reject) {
+        let queryStr = "?page=" + page;
+        let xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(xhr.responseText);
+                } else {
+                    reject({
+                        status: xhr.status,
+                        statusText: xhr.statusText
+                    });
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.open("GET", "/refs" + queryStr);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send();
+    })
 }
 
 /*
