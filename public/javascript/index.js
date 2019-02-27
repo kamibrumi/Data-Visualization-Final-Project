@@ -49,10 +49,12 @@ function findSimilar(page) {
                                     let even = index % 2 === 0;
                                     var citations = "";
                                     for (var j = 0; j < links.length; j++) {
+                                        var l = "";
+                                        var lNew = "";
                                         //var l = links[j].replace(/['"]+/g, '').substr(5); // when there is the href= at the beginning
                                         // we have to make the links to be shorter than some amount of letters
-                                        var l = links[j].replace(/['"]+/g, '');
-                                        console.log(l);
+                                        l = links[j].replace(/['"]+/g, '');
+                                        /*console.log(l);
                                         var lSize = l.length;
                                         var numberOfLines = lSize / NR_CHARS_PER_LINE;
                                         var smallerLine = lSize % NR_CHARS_PER_LINE;
@@ -65,21 +67,32 @@ function findSimilar(page) {
                                         lNew += l.substr((numberOfLines-1) * NR_CHARS_PER_LINE);
 
                                         lNew = "<a href=" + l + ">" + lNew + "</a>";
-                                        //var time = 2019;
+                                        //var time = 2019; */
                                         console.log(l);
+                                        lNew = l;
+                                        var whereToCut = 7;
+                                        if (l.indexOf("https") === 0) {
+                                            whereToCut = 8;
+
+                                        }
+                                        lNew = lNew.substr(8);
+                                        console.log(lNew);
+                                        console.log(lNew.indexOf("/"))
+                                        lNew = lNew.substr(0, lNew.indexOf("/"));
+                                        console.log(lNew);
+                                        lNew = "<a href=" + l + ">" + lNew + "</a>";
+                                        console.log(lNew);
+                                        console.log("------------");
                                         citations += lNew + " <br> <br>";
-                                        /*if (!l.includes("TemplateStyles")) {
-                                            citations += l + " <br> <br>";
-                                        }*/
                                     }
                                     timeline.innerHTML +=
                                         `<div class="${even ? 'container right' : 'container left'}">
-                      <div class="content">
-                        <h2>${index+1}</h2>
-                        <p>${citations}</p>
-                      </div>
-                  
-                   </div>`;
+                                          <div class="content">
+                                            <h2>${index+1}</h2>
+                                            <p>${citations}</p>
+                                          </div>
+                                      
+                                       </div>`;
                                     index++;
                                 }
                             }
