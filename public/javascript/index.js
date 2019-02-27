@@ -78,7 +78,7 @@ function findSimilar(page) {
                                         }
                                         lNew = lNew.substr(8);
                                         lNew = lNew.substr(0, lNew.indexOf("/"));
-                                        lNew = "<a href=" + l + ">" + lNew + "</a>";
+                                        lNew = "<a href=" + l + " target=\"_blank\">" + lNew + "</a>";
                                         citations += lNew + " <br> <br>";
                                     }
                                     timeline.innerHTML +=
