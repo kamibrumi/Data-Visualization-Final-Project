@@ -6,7 +6,7 @@ function userInput(){
     const usrPage = document.getElementById("pageTitle").value;
     let page = "Volcano";
     if (usrPage) {
-        page = usrPage;
+        page = usrPage.charAt(0).toUpperCase() + usrPage.slice(1);
     }
     return page;
 }
