@@ -46,6 +46,10 @@ function findSimilar(page) {
                         //addEntriesToTimeline(info);
                         let timeline = document.getElementById("timeline");
                         timeline.innerHTML = "";
+                        let titleEl = document.createElement("h1");
+                        titleEl.innerText = "References for " + JSON.parse(xhr.responseText).displaytitle;
+                        titleEl.style.color = "white";
+                        timeline.appendChild(titleEl);
                         console.log("update timeline?");
                         var data = info;
                         //console.log(data);
@@ -72,7 +76,7 @@ function findSimilar(page) {
                                         }
                                         lNew = lNew.substr(8);
                                         lNew = lNew.substr(0, lNew.indexOf("/"));
-                                        lNew = "<a href=" + l + ">" + lNew + "</a>";
+                                        lNew = "<a href=" + l + " target=\"_blank\">" + lNew + "</a>";
                                         citations += lNew + " <br> <br>";
                                     }
                                     timeline.innerHTML +=
