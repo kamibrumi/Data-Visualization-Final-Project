@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-const LIMIT = 4;
+const LIMIT = 5;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
