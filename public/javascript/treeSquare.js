@@ -60,7 +60,7 @@ function drawTreeMap(page) {
             var d = d3.hierarchy(data);
             treemap(d
                 .sum(function (d) {
-                    return d.pageid;
+                    return d.leafVal;
                 })
                 .sort(function (a, b) {
                     return b.height - a.height || b.value - a.value
@@ -121,7 +121,7 @@ function drawTreeMap(page) {
                     .attr("dy", ".75em")
                     .html(function (d) {
                         return '' +
-                            '<p class="title">' + d.data.title + '</p>' +
+                            '<p class="title">' + d.data.title.replace(/_/g,' ') + '</p>' +
                             '<p>' + formatNumber(d.value) + '</p>'
                             ;
                     })
@@ -136,7 +136,7 @@ function drawTreeMap(page) {
                             const root = d3.hierarchy(newChildren);
                             treemap(root
                                 .sum(function (d) {
-                                    return d.pageid;
+                                    return d.leafVal;
                                 })
                                 .sort(function (a, b) {
                                     return b.height - a.height || b.value - a.value
