@@ -1,5 +1,5 @@
 init = () => {
-  document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
+    document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
 };
 
 function userInput(){
@@ -10,6 +10,7 @@ function userInput(){
     }
     return page;
 }
+
 var index = 0;
 usrFindSimilar = () => {
     const page = userInput();
@@ -17,7 +18,8 @@ usrFindSimilar = () => {
     console.log("user clicked");
     findReferences(page).then((info) => {
         //addEntriesToTimeline(info);
-        console.log("update timeline?")
+        let timeline = document.getElementById("timeline");
+        console.log("update timeline?");
         var data = JSON.parse(info);
         //console.log(data);
         var orderList = data.reference_lists[0].order; // this is the list with the identifiers
