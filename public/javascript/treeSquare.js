@@ -201,7 +201,7 @@ function drawTreeMap(page) {
         var res = "";
         var sep = " > ";
         d.ancestors().reverse().forEach(function(i){
-            res += i.data.title + sep;
+            res += i.data.title.replace(/_/g, ' ') + sep;
         });
         return res
             .split(sep)
