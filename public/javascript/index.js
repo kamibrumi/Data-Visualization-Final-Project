@@ -11,7 +11,10 @@ function userInput(){
     }
     return page;
 }
-
+//TODO: Address no refs edge case. Shouldn't happen?
+//TODO: Timeline only shows refs with href, but there are citations without them. Need to include all.
+//TODO: Timeline shows two entries for same ref if there are two hrefs inside
+//TODO: Address user specified page doesn't exist
 
 usrFindSimilar = () => {
     const page = userInput();
