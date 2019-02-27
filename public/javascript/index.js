@@ -20,10 +20,6 @@ function userInput(){
     return page;
 }
 
-//TODO: Timeline only shows refs with href, but there are citations without them. Need to include all.
-//TODO: Timeline shows two entries for same ref if there are two hrefs inside
-//TODO: Address user specified page doesn't exist
-
 usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
@@ -49,7 +45,7 @@ function findSimilar(page) {
                         let timeline = document.getElementById("timeline");
                         timeline.innerHTML = "";
                         let titleEl = document.createElement("h1");
-                        titleEl.innerText = "References for " + JSON.parse(xhr.responseText).displaytitle;
+                        titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
                         titleEl.style.color = "white";
                         timeline.appendChild(titleEl);
                         console.log("update timeline?");
