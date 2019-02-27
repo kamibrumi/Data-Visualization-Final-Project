@@ -35,23 +35,26 @@ function findSimilar(page) {
             var references = data.references_by_id; // the references
             for (var i = 0; i < orderList.length; i++) {
                 var htmlData = references[orderList[i]].content.html;
-                var links = htmlData.match(/"http(.*?)"/g);
+                var links = htmlData.match(/href="(.*?)"/g);
 
                 if (links !== null) {
                     let even = index % 2 === 0;
+                    var citations = "";
                     for (var j = 0; j < links.length; j++) {
-                        var l = links[j].replace(/['"]+/g, '');
+                        var l = links[j].replace(/['"]+/g, '').substr(5);
                         var time = 2019;
-                        timeline.innerHTML +=
-                            `<div class="${even ? 'container right' : 'container left'}">
-                    <div class="content">
-                      <h2>${index+1}</h2>
-                      <p>${l}</p>
-                    </div>
-                
-                 </div>`;
-
+                        if (!l.includes("TemplateStyles")) {
+                            citations += l + " <br> <br>";
+                        }
                     }
+                    timeline.innerHTML +=
+                        `<div class="${even ? 'container right' : 'container left'}">
+                      <div class="content">
+                        <h2>${index+1}</h2>
+                        <p>${citations}</p>
+                      </div>
+                  
+                   </div>`;
                     index++;
                 }
             }
