@@ -75,6 +75,7 @@ function findSimilar(page) {
                                 index++;
                             }
                         }
+                        resolve(xhr.responseText);
                     }
                     else {
                         const error = info;
@@ -82,7 +83,6 @@ function findSimilar(page) {
                         console.error(error.statusText);
                         alert("Invalid Page Name")
                     }
-                    resolve(xhr.responseText);
                 } else {
                     const error = JSON.parse(xhr.responseText);
                     alert("Invalid Page Name");
