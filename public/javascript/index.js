@@ -12,13 +12,14 @@ function userInput(){
     return page;
 }
 
-var index = 0;
+
 usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
 };
 
 function findSimilar(page) {
+    var index = 0;
     findReferences(page)
         .then((info) => {
             //addEntriesToTimeline(info);
