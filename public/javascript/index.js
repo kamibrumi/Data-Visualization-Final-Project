@@ -14,26 +14,43 @@ var index = 0;
 usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
-
+    console.log("user clicked");
     findReferences(page).then((info) => {
-        let even = index % 2 === 0;
-        var time = 2019;
-        timeline.innerHTML += `<div class="${even ? 'container right' : 'container left'}">
-    <div class="content">
-      <h2>${time}</h2>
-      <p>${info}</p>
-    </div>
+        //addEntriesToTimeline(info);
+        console.log("update timeline?")
+        var data = JSON.parse(info);
+        //console.log(data);
+        var orderList = data.reference_lists[0].order; // this is the list with the identifiers
+        var references = data.references_by_id; // the references
+        for (var i = 0; i < orderList.length; i++) {
+            var htmlData = references[orderList[i]].content.html;
+            var links = htmlData.match(/"http(.*?)"/g);
 
-  </div>`;
-        index++;
+            if (links !== null) {
+                let even = index % 2 === 0;
+                for (var j = 0; j < links.length; j++) {
+                    var l = links[j].replace(/['"]+/g, '');
+                    var time = 2019;
+                    timeline.innerHTML +=
+                        `<div class="${even ? 'container right' : 'container left'}">
+                    <div class="content">
+                      <h2>${index+1}</h2>
+                      <p>${l}</p>
+                    </div>
+                
+                 </div>`;
+
+                }
+                index++;
+
+
+            }
+
+        }
+
+
     });
 };
-
-var index = 0;
-function createElemInTimeline() {
-
-
-}
 
 function findSimilar(page) {
     return new Promise(function (resolve, reject) {
