@@ -121,7 +121,7 @@ function drawTreeMap(page) {
                     .attr("dy", ".75em")
                     .html(function (d) {
                         return '' +
-                            '<p class="title">' + d.data.title.replace(/_/g,' ') + '</p>' +
+                            '<p class="title">' + d.data.displaytitle + '</p>' +
                             '<p>' + formatNumber(d.value) + '</p>'
                             ;
                     })
@@ -204,7 +204,7 @@ function drawTreeMap(page) {
         var res = "";
         var sep = " > ";
         d.ancestors().reverse().forEach(function(i){
-            res += i.data.title.replace(/_/g, ' ') + sep;
+            res += i.data.displaytitle + sep;
         });
         return res
             .split(sep)
