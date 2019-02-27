@@ -53,6 +53,7 @@ function findSimilar(page) {
                         var references = data.references_by_id; // the references
                         for (var i = 0; i < orderList.length; i++) {
                             var htmlData = references[orderList[i]].content.html;
+                            console.log(htmlData);
                             var links = htmlData.match(/"http(.*?)"/g);
 
                                 if (links !== null) {
@@ -68,7 +69,6 @@ function findSimilar(page) {
                                         var whereToCut = 7;
                                         if (l.indexOf("https") === 0) {
                                             whereToCut = 8;
-
                                         }
                                         lNew = lNew.substr(8);
                                         lNew = lNew.substr(0, lNew.indexOf("/"));
