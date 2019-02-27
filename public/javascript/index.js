@@ -16,11 +16,14 @@ var index = 0;
 usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
-    console.log("user clicked");
+};
+
+function findSimilar(page) {
     findReferences(page)
         .then((info) => {
             //addEntriesToTimeline(info);
             let timeline = document.getElementById("timeline");
+            timeline.innerHTML = "";
             console.log("update timeline?");
             var data = JSON.parse(info);
             //console.log(data);
@@ -51,10 +54,7 @@ usrFindSimilar = () => {
         })
         .catch((err) => {
             console.error(err.statusText);
-        })
-};
-
-function findSimilar(page) {
+        });
     return new Promise(function (resolve, reject) {
         let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
