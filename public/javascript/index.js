@@ -21,6 +21,7 @@ usrFindSimilar = () => {
     newTreeMap(page);
 };
 
+const NR_CHARS_PER_LINE = 7;
 function findSimilar(page) {
 
     return new Promise(function (resolve, reject) {
@@ -42,17 +43,34 @@ function findSimilar(page) {
                             var references = data.references_by_id; // the references
                             for (var i = 0; i < orderList.length; i++) {
                                 var htmlData = references[orderList[i]].content.html;
-                                var links = htmlData.match(/href="(.*?)"/g);
+                                var links = htmlData.match(/"http(.*?)"/g);
 
                                 if (links !== null) {
                                     let even = index % 2 === 0;
                                     var citations = "";
                                     for (var j = 0; j < links.length; j++) {
-                                        var l = links[j].replace(/['"]+/g, '').substr(5);
-                                        var time = 2019;
-                                        if (!l.includes("TemplateStyles")) {
-                                            citations += l + " <br> <br>";
+                                        //var l = links[j].replace(/['"]+/g, '').substr(5); // when there is the href= at the beginning
+                                        // we have to make the links to be shorter than some amount of letters
+                                        var l = links[j].replace(/['"]+/g, '');
+                                        console.log(l);
+                                        var lSize = l.length;
+                                        var numberOfLines = lSize / NR_CHARS_PER_LINE;
+                                        var smallerLine = lSize % NR_CHARS_PER_LINE;
+
+                                        var lNew = "";
+                                        for (var k = 0; k < numberOfLines - 1; k++) {
+                                            lNew += l.substr(k * NR_CHARS_PER_LINE, (k+1) * NR_CHARS_PER_LINE) + " <br>";
                                         }
+                                        // add the smallest line
+                                        lNew += l.substr((numberOfLines-1) * NR_CHARS_PER_LINE);
+
+                                        lNew = "<a href=" + l + ">" + lNew + "</a>";
+                                        //var time = 2019;
+                                        console.log(l);
+                                        citations += lNew + " <br> <br>";
+                                        /*if (!l.includes("TemplateStyles")) {
+                                            citations += l + " <br> <br>";
+                                        }*/
                                     }
                                     timeline.innerHTML +=
                                         `<div class="${even ? 'container right' : 'container left'}">
