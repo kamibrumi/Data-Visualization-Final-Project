@@ -64,7 +64,7 @@ function findSimilar(page) {
                                         // add the smallest line
                                         lNew += l.substr((numberOfLines-1) * NR_CHARS_PER_LINE);
 
-                                        lNew = "<a href=" + l + ">" + lNew + "</a>";
+                                        lNew = "<a href=" + l + " target=\"_blank\" >" + lNew + "</a>";
                                         //var time = 2019;
                                         console.log(l);
                                         citations += lNew + " <br> <br>";
