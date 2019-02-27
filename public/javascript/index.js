@@ -10,15 +10,30 @@ function userInput(){
     }
     return page;
 }
-
+var index = 0;
 usrFindSimilar = () => {
     const page = userInput();
     newTreeMap(page);
 
-    /*findReference(page).then((info) => {
-        use info as data however you want
-    });*/
+    findReferences(page).then((info) => {
+        let even = index % 2 === 0;
+        var time = 2019;
+        timeline.innerHTML += `<div class="${even ? 'container right' : 'container left'}">
+    <div class="content">
+      <h2>${time}</h2>
+      <p>${info}</p>
+    </div>
+
+  </div>`;
+        index++;
+    });
 };
+
+var index = 0;
+function createElemInTimeline() {
+
+
+}
 
 function findSimilar(page) {
     return new Promise(function (resolve, reject) {
