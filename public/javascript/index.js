@@ -11,7 +11,7 @@ function userInput(){
     }
     return page;
 }
-//TODO: Address no refs edge case. Shouldn't happen?
+
 //TODO: Timeline only shows refs with href, but there are citations without them. Need to include all.
 //TODO: Timeline shows two entries for same ref if there are two hrefs inside
 //TODO: Address user specified page doesn't exist
@@ -22,52 +22,54 @@ usrFindSimilar = () => {
 };
 
 function findSimilar(page) {
-    var index = 0;
-    findReferences(page)
-        .then((info) => {
-            //addEntriesToTimeline(info);
-            let timeline = document.getElementById("timeline");
-            timeline.innerHTML = "";
-            console.log("update timeline?");
-            var data = JSON.parse(info);
-            //console.log(data);
-            var orderList = data.reference_lists[0].order; // this is the list with the identifiers
-            var references = data.references_by_id; // the references
-            for (var i = 0; i < orderList.length; i++) {
-                var htmlData = references[orderList[i]].content.html;
-                var links = htmlData.match(/href="(.*?)"/g);
 
-                if (links !== null) {
-                    let even = index % 2 === 0;
-                    var citations = "";
-                    for (var j = 0; j < links.length; j++) {
-                        var l = links[j].replace(/['"]+/g, '').substr(5);
-                        var time = 2019;
-                        if (!l.includes("TemplateStyles")) {
-                            citations += l + " <br> <br>";
-                        }
-                    }
-                    timeline.innerHTML +=
-                        `<div class="${even ? 'container right' : 'container left'}">
-                      <div class="content">
-                        <h2>${index+1}</h2>
-                        <p>${citations}</p>
-                      </div>
-                  
-                   </div>`;
-                    index++;
-                }
-            }
-        })
-        .catch((err) => {
-            console.error(err.statusText);
-        });
     return new Promise(function (resolve, reject) {
         let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
         xhr.onload = () => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
+                    var index = 0;
+                    findReferences(page)
+                        .then((info) => {
+                            //addEntriesToTimeline(info);
+                            let timeline = document.getElementById("timeline");
+                            timeline.innerHTML = "";
+                            console.log("update timeline?");
+                            var data = JSON.parse(info);
+                            //console.log(data);
+                            var orderList = data.reference_lists[0].order; // this is the list with the identifiers
+                            var references = data.references_by_id; // the references
+                            for (var i = 0; i < orderList.length; i++) {
+                                var htmlData = references[orderList[i]].content.html;
+                                var links = htmlData.match(/href="(.*?)"/g);
+
+                                if (links !== null) {
+                                    let even = index % 2 === 0;
+                                    var citations = "";
+                                    for (var j = 0; j < links.length; j++) {
+                                        var l = links[j].replace(/['"]+/g, '').substr(5);
+                                        var time = 2019;
+                                        if (!l.includes("TemplateStyles")) {
+                                            citations += l + " <br> <br>";
+                                        }
+                                    }
+                                    timeline.innerHTML +=
+                                        `<div class="${even ? 'container right' : 'container left'}">
+                      <div class="content">
+                        <h2>${index+1}</h2>
+                        <p>${citations}</p>
+                      </div>
+                  
+                   </div>`;
+                                    index++;
+                                }
+                            }
+                        })
+                        .catch((err) => {
+                            console.error("Status code: " + err.status);
+                            console.error(err.statusText);
+                        });
                     resolve(xhr.responseText);
                 } else {
                     reject({

@@ -18,31 +18,38 @@ router.get('/similar', function(req, res, next) {
 
 router.get('/refs', function(req, res, next) {
   if(req.query && req.query.page) {
-    makeCitations(req.query.page, res);
+    makeCitations(res, req.query.page);
   }
 });
 
-function makeCitations(page, res) {
-  getCitations(page).then((response) => {
-    res.send(response)
-  })
+function makeCitations(res, page) {
+  getCitations(page)
+      .then((response) => {
+        console.log("FINISHED REF");
+        res.send(response)
+      })
+      .catch((err) => {
+        console.error("ERROR FETCHING ROOT CITATIONS");
+        console.error("Status code: " + err.status);
+        console.error(err.statusText);
+      });
 }
 
 function getCitations(page) {
+  console.log("REF PAGE: " + page);
   return new Promise(function (resolve, reject){
-    console.log("GETTING REF");
     let xhr  = new XMLHttpRequest();
     xhr.onload = function(e) {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log("RETURN REF");
           resolve(xhr.responseText)
+        } else if (xhr.status === 302) {
+          console.log("REDIRECT")
         } else {
           reject({
             status: xhr.status,
             statusText: xhr.statusText
           });
-          console.error(xhr.statusText)
         }
       }
     };
@@ -69,23 +76,29 @@ function makeSimTree(res, page) {
   };
   getThreeSim(page)
       .then(async (simResponse) => {
-        console.log("RESPONDED");
         simPages.children = JSON.parse(simResponse)["pages"];
         let finalArray = simPages.children.map(async (t) => {
-          const simResult = await getThreeSim(t.title);
-          t["children"] = JSON.parse(simResult)["pages"];
-          const refResult = JSON.parse(await getCitations(t.title));
-          let numCitations = 0;
-          if (refResult.reference_lists.length > 0) {
-            numCitations = refResult.reference_lists[0].order.length;
-          }
-          const leafVal = numCitations/LIMIT;
-          console.log("Leaf val: " + leafVal);
-          t.children.forEach((child) => {
-            child["leafVal"] = leafVal;
-          });
+          try {
+            const simResult = await getThreeSim(t.title);
+            t["children"] = JSON.parse(simResult)["pages"];
+            const rawResult = await getCitations(t.title);
+            const refResult = JSON.parse(rawResult);
+            let numCitations = 0;
+            if (refResult.reference_lists.length > 0) {
+              numCitations = refResult.reference_lists[0].order.length;
+            }
+            const leafVal = numCitations / LIMIT;
+            console.log("Leaf val: " + leafVal);
+            t.children.forEach((child) => {
+              child["leafVal"] = leafVal;
+            });
 
-          return simResult;
+            return simResult;
+          } catch (err) {
+            console.error("ERROR GETTING CHILD INFO");
+            console.error("Status code: " + err.status);
+            console.error(err.statusText)
+          }
         });
         // needed so that response is not sent until each iteration of loop has completed and received response
         const resolvedFinalArray = await Promise.all(finalArray);
@@ -94,18 +107,18 @@ function makeSimTree(res, page) {
         res.send(simPages);
       })
       .catch((err) => {
+        console.error("ERROR FETCHING ROOT RELATED");
+        console.error("Status code: " + err.status);
         console.error(err.statusText);
       });
 }
 
 function getThreeSim(page) {
   return new Promise(function (resolve, reject){
-    console.log("GETTING SIM");
     let xhr  = new XMLHttpRequest();
     xhr.onload = function(e) {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log("RETURN SIM");
           let relatedPages = JSON.parse(xhr.responseText);
           relatedPages.pages = relatedPages.pages.slice(1,LIMIT+1);
           resolve(JSON.stringify(relatedPages));
@@ -114,7 +127,6 @@ function getThreeSim(page) {
             status: xhr.status,
             statusText: xhr.statusText
           });
-          console.error(xhr.statusText)
         }
       }
     };
