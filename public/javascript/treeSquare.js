@@ -144,6 +144,10 @@ function drawTreeMap(page) {
                             );
                             display(root);
                             return;
+                        })
+                        .catch((err) => {
+                            console.error("Status code: " + err.status);
+                            console.error(err.statusText);
                         });
                 }
 
@@ -151,6 +155,7 @@ function drawTreeMap(page) {
             }
         })
         .catch((err) => {
+            console.error("Status code: " + err.status);
             console.error(err.statusText);
         });
     function text(text) {
