@@ -73,13 +73,17 @@ function makeSimTree(res, page) {
         let finalArray = simPages.children.map(async (t) => {
           const simResult = await getThreeSim(t.title);
           t["children"] = JSON.parse(simResult)["pages"];
-          const refResult = await getCitations(t.title);
-          const numCitations = JSON.parse(refResult).reference_lists[0].order.length;
+          const refResult = JSON.parse(await getCitations(t.title));
+          let numCitations = 0;
+          if (refResult.reference_lists.length > 0) {
+            numCitations = refResult.reference_lists[0].order.length;
+          }
           const leafVal = numCitations/LIMIT;
           console.log("Leaf val: " + leafVal);
           t.children.forEach((child) => {
             child["leafVal"] = leafVal;
           });
+
           return simResult;
         });
         // needed so that response is not sent until each iteration of loop has completed and received response
