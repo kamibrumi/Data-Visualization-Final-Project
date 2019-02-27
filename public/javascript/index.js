@@ -42,6 +42,8 @@ function findSimilar(page) {
 
                     const info = JSON.parse(await findReferences(page));
                     if (info.reference_lists) {
+                        const html = JSON.parse(await findHTML(page));
+                        console.log(html);
                         console.log("REFS PAGE" + page);
                         //addEntriesToTimeline(info);
                         let timeline = document.getElementById("timeline");
@@ -133,6 +135,29 @@ function findReferences(page) {
             }
         };
         xhr.open("GET", "/refs" + queryStr);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send();
+    })
+}
+
+function findHTML(page) {
+    return new Promise(function (resolve, reject) {
+        let queryStr = "?page=" + page;
+        let xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    resolve(xhr.responseText);
+                } else {
+                    reject({
+                        status: xhr.status,
+                        statusText: xhr.statusText
+                    });
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.open("GET", "/html" + queryStr);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send();
     })
