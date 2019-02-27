@@ -25,6 +25,7 @@ router.get('/refs', function(req, res, next) {
 function getCitations(page, res) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function(e) {
+    console.log("FINISHED REFS");
     res.send(xhr.responseText);
   };
   xhr.onerror = function() {
@@ -58,7 +59,7 @@ function makeSimTree(res, page) {
         });
         // needed so that response is not sent until each iteration of loop has completed and received response
         const resolvedFinalArray = await Promise.all(finalArray);
-        console.log("FINISHED");
+        console.log("FINISHED SIM");
         res.send(simPages);
       })
       .catch((err) => {
