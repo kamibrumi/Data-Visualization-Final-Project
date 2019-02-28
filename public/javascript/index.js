@@ -1,6 +1,7 @@
 init = () => {
     document.getElementById("findSimilar").addEventListener("click", usrFindSimilar, true);
     window.addEventListener("keydown", keyPressHandler, true);
+    usrFindSimilar();
 };
 
 function keyPressHandler (e) {
@@ -12,7 +13,7 @@ function keyPressHandler (e) {
 
 function userInput(){
     const usrPage = document.getElementById("pageTitle").value;
-    let page = "Volcano";
+    let page = "Worcester_Polytechnic_Institute";
     if (usrPage) {
         page = usrPage.charAt(0).toUpperCase() + usrPage.slice(1);
         page = page
@@ -45,7 +46,6 @@ function findSimilar(page) {
                         titleEl.style.color = "white";
                         var data = info;
                         if (data.reference_lists.length > 0 && data.reference_lists[data.reference_lists.length-1].order) {
-                            titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
                             titleEl.style.fontFamily = 'Lucida Console';
                             timeline.appendChild(titleEl);
                             var orderList = data.reference_lists[data.reference_lists.length - 1].order; // this is the list with the identifiers
@@ -58,6 +58,7 @@ function findSimilar(page) {
 
                                 var links = htmlData.match(/"http(.*?)"/g);
                                 if (links !== null) {
+                                    titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
                                     let even = index % 2 === 0;
                                     var citations = "";
 
@@ -85,10 +86,14 @@ function findSimilar(page) {
                                           </div>
                                        </div>`;
                                     index++;
+                                } else {
+                                    titleEl.innerText = "No Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
+                                    titleEl.style.fontFamily = 'Lucida Console';
+                                    timeline.appendChild(titleEl);
                                 }
                             }
                         } else {
-                            titleEl.innerText = "No Linked References for " + JSON.parse(xhr.responseText).displaytitle;
+                            titleEl.innerText = "No Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
                             titleEl.style.fontFamily = 'Lucida Console';
                             timeline.appendChild(titleEl);
 

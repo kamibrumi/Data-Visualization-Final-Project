@@ -9,11 +9,14 @@ https://drive.google.com/file/d/1XXTSnp6-5avM_cMBkNQ-78uAGHj7czQd/view?usp=shari
 https://docs.google.com/presentation/d/1cQQQJsY07G3MfgyOrK9SuGxIeXiW2jEE8WgqjSec03E/edit?usp=sharing
 
 ## Program Structure: 
-- In the views folder we have the divs that contain the treemap chart and the list of citations.
+- In the views folder we have the html used for the webpages in the project.
 - In the public folder there is the following:
-  - javascript folder with the separate scripts treeSquare.js for the treemap and the main index.js, wich contains the code that handles       the behaviour of the html: takes the word the user typed in the box and uses it to request the similar topics and the citations from       Wikimedia. With this data we create the treemap and the list on its right.
+  - javascript folder with the separate scripts treeSquare.js for the treemap and the main index.js, which contains the
+  code that handles the behaviour of the html: takes the word the user typed in the box and uses it to request the
+  similar topics and the citations from Wikimedia. With this data we create the treemap and the list on its right.
   - stylesheets folder contains the css that define the syle of the webpage and the charts.
-- In the routes and bin folders we have the backend of the project, basically the code that requests the data from Wikimedia and also the   one that connects to the heroku servers, where we host our visualization.
+- The routes folder contains the server routers. The main one is index.js, which deals with all requests to the wikipedia
+REST API (documentation available here: https://en.wikipedia.org/api/rest_v1/)
   
 # To Run
 On UNIX: `DEBUG=final-project:* npm run devstart`  
@@ -26,8 +29,13 @@ On Windows: `set DEBUG=final-project:* & npm run devstart`
 
 If build fails, run `heroku logs` to see error
 
-# Merge conflict with package-lock.json
-1) Delete package-lock.json
-2) Run `npm i`
-3) Run `git commit`
-
+# Technical Achievements
+- Fully integrated Wikipedia REST API
+- Made a way to give treemap children proper relative size without creating a heirarchy of entire database of wikipedia 
+pages
+- Learned how to use Promises!
+# Design Achievment
+- Made cool timeline
+- Treemap follows screen when scrolling down to keep context
+- Searching new page starts you back at the top of the timeline
+- Linked timeline to treemap
