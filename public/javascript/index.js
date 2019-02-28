@@ -28,9 +28,7 @@ usrFindSimilar = () => {
     newTreeMap(page);
 };
 
-const NR_CHARS_PER_LINE = 7;
 function findSimilar(page) {
-
     return new Promise(function (resolve, reject) {
         let queryStr = "?page=" + page;
         let xhr = new XMLHttpRequest();
