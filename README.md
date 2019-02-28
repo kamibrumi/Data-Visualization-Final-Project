@@ -15,7 +15,7 @@ https://cs480x-finalproj.herokuapp.com/
 https://drive.google.com/file/d/1XXTSnp6-5avM_cMBkNQ-78uAGHj7czQd/view?usp=sharing
 
 ### Link to process book
-https://docs.google.com/presentation/d/1cQQQJsY07G3MfgyOrK9SuGxIeXiW2jEE8WgqjSec03E/edit?usp=sharing
+https://drive.google.com/file/d/1VemA8jp3hQkZoHCOATvGlz_yVHrrF08q/view?usp=sharing
 
 ## Program Structure: 
 - In the views folder we have the html used for the webpages in the project.
@@ -46,7 +46,7 @@ REST API
 pages
 - Learned how to use Promises!
 
-# Design Achievments
+# Design Achievements
 - Made cool timeline
 - Treemap follows screen when scrolling down to keep context
 - Searching new page starts you back at the top of the timeline
