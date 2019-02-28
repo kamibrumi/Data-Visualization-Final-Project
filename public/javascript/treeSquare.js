@@ -228,7 +228,7 @@ function drawTreeMap(page) {
         var res = "";
         var sep = " > ";
         d.ancestors().reverse().forEach(function(i){
-            res += i.data.displaytitle + sep;
+            res += i.data.displaytitle.replace(/_/g, ' ') + sep;
         });
         return res
             .split(sep)

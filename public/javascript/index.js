@@ -15,7 +15,11 @@ function userInput(){
     let page = "Volcano";
     if (usrPage) {
         page = usrPage.charAt(0).toUpperCase() + usrPage.slice(1);
-        page = page.replace(/ /g, '_')
+        page = page
+            .split(' ')
+            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+            .join('_');
+        console.log(page)
     }
     return page;
 }
