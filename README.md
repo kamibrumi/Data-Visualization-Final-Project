@@ -4,7 +4,7 @@
 Camelia D. Brumar, Karsten Roberts, Thomas Wiles
 
 # To Run Locally
-`npm install`
+Run `npm install` in terminal pointed at this directory. Then:  
 On UNIX: `DEBUG=final-project:* npm run devstart`  
 On Windows: `set DEBUG=final-project:* & npm run devstart`
 
@@ -25,12 +25,20 @@ https://docs.google.com/presentation/d/1cQQQJsY07G3MfgyOrK9SuGxIeXiW2jEE8WgqjSec
   similar topics and the citations from Wikimedia. With this data we create the treemap and the list on its right.
   - stylesheets folder contains the css that define the syle of the webpage and the charts.
 - The routes folder contains the server routers. The main one is index.js, which deals with all requests to the wikipedia
-REST API (documentation available here: https://en.wikipedia.org/api/rest_v1/)
+REST API
 
 ### Project Features and Functionality
  - Search bar: Enter any existing Wikipedia page in the search bar and press enter or click the button to set that article as the root node. Any terms entered that are not registered Wikipedia pages will return an alert error. 
  - TreeMap (Left): After searching for an article, a treemap will populate with the 5 most similar articles to what the user entered. The boxes are sized based on how references these similar articles have. Clicking on one of rectangles of the treemap will search for that article instead and repopulate the page. 
 - Citation List (Right): A list of all references that contain links within them for the current root node/search term are displayed on the right. Clicking the hyperlink opens a new tab to the source page of the citation, and clicking the 'see reference in context' button opens a tab showing where that reference is used in the Wikipedia article in question. 
+
+### Resources used
+- D3.js (https://d3js.org/)
+- Node.js (https://nodejs.org/en/)
+- Express.js (http://expressjs.com/)
+- Wikipedia REST API (documentation available here: https://en.wikipedia.org/api/rest_v1/)
+- Heroku (https://dashboard.heroku.com/)
+
 
 # Technical Achievements
 - Fully integrated Wikipedia REST API
