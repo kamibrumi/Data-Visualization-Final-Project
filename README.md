@@ -13,7 +13,7 @@ https://docs.google.com/presentation/d/1cQQQJsY07G3MfgyOrK9SuGxIeXiW2jEE8WgqjSec
 - In the public folder there is the following:
   - javascript folder with the separate scripts treeSquare.js for the treemap and the main index.js, wich contains the code that handles       the behaviour of the html: takes the word the user typed in the box and uses it to request the similar topics and the citations from       Wikimedia. With this data we create the treemap and the list on its right.
   - stylesheets folder contains the css that define the syle of the webpage and the charts.
-- In the routes and bin folders we have the backend of the project, basically the code that requests the data from Wikimedia and also the   one that connects to the heroku servers.
+- In the routes and bin folders we have the backend of the project, basically the code that requests the data from Wikimedia and also the   one that connects to the heroku servers, where we host our visualization.
   
 # To Run
 On UNIX: `DEBUG=final-project:* npm run devstart`  
