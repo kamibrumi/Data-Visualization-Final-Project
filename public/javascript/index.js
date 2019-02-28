@@ -19,7 +19,6 @@ function userInput(){
             .split(' ')
             .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
             .join('_');
-        console.log(page)
     }
     return page;
 }
@@ -48,7 +47,7 @@ function findSimilar(page) {
                         titleEl.style.color = "white";
                         var data = info;
                         if (data.reference_lists.length > 0 && data.reference_lists[data.reference_lists.length-1].order) {
-                            titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
+                            titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
                             timeline.appendChild(titleEl);
                             var orderList = data.reference_lists[data.reference_lists.length - 1].order; // this is the list with the identifiers
 
