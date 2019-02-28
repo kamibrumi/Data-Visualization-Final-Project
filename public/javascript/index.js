@@ -38,8 +38,6 @@ function findSimilar(page) {
 
                     const info = JSON.parse(await findReferences(page));
                     if (info.reference_lists) {
-                        const html = JSON.parse(await findHTML(page));
-                        console.log(html);
                         console.log("REFS PAGE" + page);
                         //addEntriesToTimeline(info);
                         let timeline = document.getElementById("timeline");
@@ -48,20 +46,24 @@ function findSimilar(page) {
                         titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
                         titleEl.style.color = "white";
                         timeline.appendChild(titleEl);
-                        console.log("update timeline?");
                         var data = info;
                         //console.log(data);
                         var orderList = data.reference_lists[0].order; // this is the list with the identifiers
                         var references = data.references_by_id; // the references
                         for (var i = 0; i < orderList.length; i++) {
                             var htmlData = references[orderList[i]].content.html;
-                            var links = htmlData.match(/"http(.*?)"/g);
+                            const urlTail = references[orderList[i]].back_links[0].href.substr(1);
+                            console.log("TAIL: " + urlTail);
+                            const wikiURL = "https://en.wikipedia.org/wiki" + urlTail;
 
+                            var links = htmlData.match(/"http(.*?)"/g);
+                            console.log("Thinking: " + orderList);
                                 if (links !== null) {
                                     let even = index % 2 === 0;
                                     var citations = "";
 
                                     for (var j = 0; j < links.length; j++) {
+
                                         var l = "";
                                         var lNew = "";
                                         l = links[j].replace(/['"]+/g, '');
@@ -82,8 +84,8 @@ function findSimilar(page) {
                                           <div class="content">
                                             <h2>${index+1}</h2>
                                             <p>${citations}</p>
+                                            <form action="${wikiURL}" method="get" target="_blank"><button type="submit"> See Reference in Context</button> </form>
                                           </div>
-                                      
                                        </div>`;
                                     index++;
                                 }
