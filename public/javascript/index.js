@@ -50,14 +50,14 @@ function findSimilar(page) {
                         titleEl.innerText = "References for " + JSON.parse(xhr.responseText).displaytitle;
                         titleEl.style.color = "white";
                         timeline.appendChild(titleEl);
-                        console.log("update timeline?");
+                        //console.log("update timeline?");
                         var data = info;
                         //console.log(data);
                         var orderList = data.reference_lists[0].order; // this is the list with the identifiers
                         var references = data.references_by_id; // the references
                         for (var i = 0; i < orderList.length; i++) {
                             var htmlData = references[orderList[i]].content.html;
-                            console.log(htmlData);
+                            //console.log(htmlData);
                             var links = htmlData.match(/"http(.*?)"/g);
 
                                 if (links !== null) {
@@ -67,6 +67,7 @@ function findSimilar(page) {
                                     for (var j = 0; j < links.length; j++) {
                                         var l = "";
                                         var lNew = "";
+
                                         l = links[j].replace(/['"]+/g, '');
                                         console.log(l);
                                         lNew = l;
@@ -76,7 +77,7 @@ function findSimilar(page) {
                                         }
                                         lNew = lNew.substr(8);
                                         lNew = lNew.substr(0, lNew.indexOf("/"));
-                                        lNew = "<a href=" + l + " target=\"_blank\">" + lNew + "</a>";
+                                        lNew = "<a href=" + l + " target=\"_blank\" style='color: #7FC29B'>" + lNew + "</a>";
                                         citations += lNew + " <br> <br>";
                                     }
                                     timeline.innerHTML +=
