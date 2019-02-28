@@ -63,7 +63,6 @@ function findSimilar(page) {
                                     var citations = "";
 
                                     for (var j = 0; j < links.length; j++) {
-
                                         var l = "";
                                         var lNew = "";
                                         l = links[j].replace(/['"]+/g, '');
@@ -75,7 +74,7 @@ function findSimilar(page) {
                                         }
                                         lNew = lNew.substr(8);
                                         lNew = lNew.substr(0, lNew.indexOf("/"));
-                                        lNew = "<a href=" + l + " target=\"_blank\">" + lNew + "</a>";
+                                        lNew = "<a href=" + l + " target=\"_blank\" style='color: #7FC29B'>" + lNew + "</a>";
                                         citations += lNew + " <br> <br>";
                                     }
                                     timeline.innerHTML +=
@@ -137,29 +136,6 @@ function findReferences(page) {
             }
         };
         xhr.open("GET", "/refs" + queryStr);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send();
-    })
-}
-
-function findHTML(page) {
-    return new Promise(function (resolve, reject) {
-        let queryStr = "?page=" + page;
-        let xhr = new XMLHttpRequest();
-        xhr.onload = () => {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    resolve(xhr.responseText);
-                } else {
-                    reject({
-                        status: xhr.status,
-                        statusText: xhr.statusText
-                    });
-                    console.error(xhr.statusText);
-                }
-            }
-        };
-        xhr.open("GET", "/html" + queryStr);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send();
     })
