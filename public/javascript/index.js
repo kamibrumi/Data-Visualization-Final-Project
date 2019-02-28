@@ -43,21 +43,23 @@ function findSimilar(page) {
                         let timeline = document.getElementById("timeline");
                         timeline.innerHTML = "";
                         let titleEl = document.createElement("h1");
-                        titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
                         titleEl.style.color = "white";
-                        timeline.appendChild(titleEl);
                         var data = info;
                         //console.log(data);
-                        var orderList = data.reference_lists[0].order; // this is the list with the identifiers
-                        var references = data.references_by_id; // the references
-                        for (var i = 0; i < orderList.length; i++) {
-                            var htmlData = references[orderList[i]].content.html;
-                            const urlTail = references[orderList[i]].back_links[0].href.substr(1);
-                            console.log("TAIL: " + urlTail);
-                            const wikiURL = "https://en.wikipedia.org/wiki" + urlTail;
+                        if (data.reference_lists.length > 0 && data.reference_lists[data.reference_lists.length-1].order) {
+                            titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
+                            timeline.appendChild(titleEl);
+                            var orderList = data.reference_lists[data.reference_lists.length - 1].order; // this is the list with the identifiers
 
-                            var links = htmlData.match(/"http(.*?)"/g);
-                            console.log("Thinking: " + orderList);
+                            var references = data.references_by_id; // the references
+                            for (var i = 0; i < orderList.length; i++) {
+                                var htmlData = references[orderList[i]].content.html;
+                                const urlTail = references[orderList[i]].back_links[0].href.substr(1);
+                                console.log("TAIL: " + urlTail);
+                                const wikiURL = "https://en.wikipedia.org/wiki" + urlTail;
+
+                                var links = htmlData.match(/"http(.*?)"/g);
+                                console.log("Thinking: " + orderList);
                                 if (links !== null) {
                                     let even = index % 2 === 0;
                                     var citations = "";
@@ -82,13 +84,18 @@ function findSimilar(page) {
                                     timeline.innerHTML +=
                                         `<div class="${even ? 'container right' : 'container left'}">
                                           <div class="content">
-                                            <h2>${index+1}</h2>
+                                            <h2>${index + 1}</h2>
                                             <p>${citations}</p>
                                             <form action="${wikiURL}" method="get" target="_blank"><button type="submit"> See Reference in Context</button> </form>
                                           </div>
                                        </div>`;
                                     index++;
                                 }
+                            }
+                        } else {
+                            titleEl.innerText = "No Linked References for " + JSON.parse(xhr.responseText).displaytitle;
+                            timeline.appendChild(titleEl);
+
                         }
                         resolve(xhr.responseText);
                     }
