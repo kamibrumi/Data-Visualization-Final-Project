@@ -22,9 +22,32 @@ router.get('/refs', function(req, res, next) {
   }
 });
 
+router.get('/html', function(req, res, next) {
+  if(req.query && req.query.page) {
+    makeHTMLString(res, req.query.page);
+  }
+});
+
+function makeHTMLString(res, page) {
+  page = page.replace(/['"]+/g, '');
+  getHTML(page)
+      .then((response) => {
+        console.log("FINISHED HTML")
+        res.send(JSON.stringify({
+          html: response
+        }));
+      })
+      .catch((err) => {
+        console.error("ERROR FETCHING HTML");
+        console.error("Status code: " + err.status);
+        console.error(err.statusText);
+        res.send(err)
+      })
+
+}
+
 function makeCitations(res, page) {
   page = page.replace(/['"]+/g, '');
-  console.log("FAKE PAGE: " + page);
   getCitations(page)
       .then((response) => {
         console.log("FINISHED REF");
@@ -141,6 +164,34 @@ function getThreeSim(page) {
       });
     };
     xhr.open("GET", "https://en.wikipedia.org/api/rest_v1/page/related/" + page, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Api-User-Agent", "khroberts@wpi.edu");
+    xhr.send();
+  })
+}
+
+function getHTML(page) {
+  return new Promise(function (resolve, reject){
+    let xhr  = new XMLHttpRequest();
+    xhr.onload = function(e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          resolve(xhr.responseText)
+        } else {
+          reject({
+            status: xhr.status,
+            statusText: xhr.statusText
+          });
+        }
+      }
+    };
+    xhr.onerror = function() {
+      reject({
+        status: xhr.status,
+        statusText: xhr.statusText
+      });
+    };
+    xhr.open("GET", "https://en.wikipedia.org/api/rest_v1/page/html/" + page, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("Api-User-Agent", "khroberts@wpi.edu");
     xhr.send();
