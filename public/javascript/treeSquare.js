@@ -169,6 +169,7 @@ function drawTreeMap(page) {
                         });
                 }
 
+                window.scrollTo(0, 0);
                 return g;
             }
         })
@@ -221,7 +222,7 @@ function drawTreeMap(page) {
         return breadcrumbs(d) +
             (d.parent
                 ? " -  Click to zoom out"
-                : " - Click inside square to zoom in");
+                : " - Similar Articles");
     }
     function breadcrumbs(d) {
         var res = "";
