@@ -48,6 +48,7 @@ function findSimilar(page) {
                         var data = info;
                         if (data.reference_lists.length > 0 && data.reference_lists[data.reference_lists.length-1].order) {
                             titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle.replace(/_/g, " ");
+                            titleEl.style.fontFamily = 'Lucida Console';
                             timeline.appendChild(titleEl);
                             var orderList = data.reference_lists[data.reference_lists.length - 1].order; // this is the list with the identifiers
 
@@ -90,6 +91,7 @@ function findSimilar(page) {
                             }
                         } else {
                             titleEl.innerText = "No Linked References for " + JSON.parse(xhr.responseText).displaytitle;
+                            titleEl.style.fontFamily = 'Lucida Console';
                             timeline.appendChild(titleEl);
 
                         }
