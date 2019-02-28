@@ -38,14 +38,11 @@ function findSimilar(page) {
 
                     const info = JSON.parse(await findReferences(page));
                     if (info.reference_lists) {
-                        console.log("REFS PAGE" + page);
-                        //addEntriesToTimeline(info);
                         let timeline = document.getElementById("timeline");
                         timeline.innerHTML = "";
                         let titleEl = document.createElement("h1");
                         titleEl.style.color = "white";
                         var data = info;
-                        //console.log(data);
                         if (data.reference_lists.length > 0 && data.reference_lists[data.reference_lists.length-1].order) {
                             titleEl.innerText = "Linked References for " + JSON.parse(xhr.responseText).displaytitle;
                             timeline.appendChild(titleEl);
@@ -55,11 +52,9 @@ function findSimilar(page) {
                             for (var i = 0; i < orderList.length; i++) {
                                 var htmlData = references[orderList[i]].content.html;
                                 const urlTail = references[orderList[i]].back_links[0].href.substr(1);
-                                console.log("TAIL: " + urlTail);
                                 const wikiURL = "https://en.wikipedia.org/wiki" + urlTail;
 
                                 var links = htmlData.match(/"http(.*?)"/g);
-                                console.log("Thinking: " + orderList);
                                 if (links !== null) {
                                     let even = index % 2 === 0;
                                     var citations = "";
@@ -69,7 +64,6 @@ function findSimilar(page) {
                                         var l = "";
                                         var lNew = "";
                                         l = links[j].replace(/['"]+/g, '');
-                                        console.log(l);
                                         lNew = l;
                                         var whereToCut = 7;
                                         if (l.indexOf("https") === 0) {
